@@ -99,13 +99,13 @@ export default function Header({ setMenuOpen, setCartOpen }) {
 
       {/* --- CENTER SECTION: Logo --- */}
       <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-auto">
-        <img
+        {/* <img
           onMouseEnter={playHoverSound}
           src={logo}
           alt="Maison Aditi"
           onClick={goHome}
           className="h-20 sm:h-28 translate-y-2 sm:translate-y-4 cursor-pointer w-auto object-contain opacity-90 hover:opacity-100 transition-all duration-300"
-        />
+        /> */}
       </div>
 
       {/* --- RIGHT SECTION: Sound & Actions --- */}

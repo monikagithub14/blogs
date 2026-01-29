@@ -2,6 +2,7 @@
 // App.jsx
 import React, { useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
+import Navbar from "./components/CompHeader/Navbar.jsx";
 
 
 import "./styles/fonts.css";
@@ -27,6 +28,7 @@ function AppContent() {
 
   return (
     <>
+    <Navbar />
       <Routes>
       
 

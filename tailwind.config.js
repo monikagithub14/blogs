@@ -5,6 +5,7 @@ export default {
       fontFamily: {
         amandine: ['Amandine', 'cursive'],
         michroma: ['Michroma', 'sans-serif'],
+        montserrat: ["Montserrat", "sans-serif"],
         decorative: ['"Cinzel Decorative"', 'cursive'],
         vishal: ['"Cinzel"', 'serif'],
       },

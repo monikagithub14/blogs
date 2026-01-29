@@ -5,6 +5,7 @@ import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import Footer from "../../components/ComFooter/Footer";
 import Header from "../../components/GardenUI/Header";
 import MenuPopup from "../../components/Menu";
+import background from "../../../public/background.jpg"
 
 const Blog = () => {
      const [menuOpen, setMenuOpen] = useState(false);
@@ -31,7 +32,7 @@ const Blog = () => {
       <div
         className="absolute top-0 left-0 w-full h-[120vh] z-0 pointer-events-none"
         style={{
-          backgroundImage: "url('public/aditi-bg.png')",
+          backgroundImage: `url(${background})`,
           backgroundSize: "cover",
           backgroundPosition: "top center",
           backgroundRepeat: "no-repeat",
@@ -44,20 +45,21 @@ const Blog = () => {
       <div className="relative z-10 w-full">
         {/* Hero */}
         <header className="flex flex-col items-center text-center mt-32 md:mt-60 px-4">
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif leading-tight">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif leading-tight text-white font-montserrat">
             Words Infused With Fragrance,
             <br className="hidden md:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 via-blue-100 to-white block md:inline mt-2 md:mt-0">
+            <span className="text-white bg-clip-text block md:inline mt-2 md:mt-0">
               Written For The Soul
             </span>
           </h1>
 
-          <p className="mt-4 md:mt-6 max-w-2xl text-gray-300 text-xs md:text-sm leading-relaxed px-4">
-            A Sacred Space Where Stories Of Scent, Divinity, And Inner Awakening
-            Unfold.
+          <p className="mt-4 md:mt-6 max-w-2xl text-white text-xs md:text-sm leading-relaxed px-4">
+            a sacred space where stories of scent, divinity, and inner awakening unfold. 
+            <br />
+            Here, fragrance is more than aroma; it is memory, energy, and ritual.
           </p>
 
-          <div className="mt-8 md:mt-12 text-xs md:text-sm uppercase tracking-widest text-gray-400">
+          <div className="mt-8 md:mt-12 text-xs md:text-sm uppercase tracking-widest text-white">
             Let Your{" "}
             <span className="text-white font-bold">
               Soul Decide Which Garden
@@ -89,11 +91,11 @@ const Blog = () => {
         </header>
 
         {/* Heading */}
-        <div className="flex flex-col px-6 md:px-16 mt-32 md:mt-56 md:flex-row justify-between items-start md:items-end mb-8 md:mb-12 pb-4 md:pb-8">
+        <div className="bg-white text-black flex flex-col px-6 md:px-16 mt-32 md:mt-56 md:flex-row justify-between items-start md:items-end mb-8 md:mb-12 pb-4 md:pb-8">
           <h2 className="text-3xl md:text-4xl font-serif max-w-md mb-4 md:mb-0">
             Where Fragrance Meets Consciousness
           </h2>
-          <p className="text-xs max-w-md text-gray-300 md:text-right">
+          <p className="text-xs max-w-md text-gray-500 md:text-right">
             Welcome to the Maison Aditi Journal a realm where fragrance becomes
             <br className="hidden md:block" /> a prayer, stories flow like
             incense, and every word carries The Essence

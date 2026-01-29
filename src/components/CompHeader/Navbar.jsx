@@ -1,67 +1,43 @@
 import React, { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars } from "react-icons/fa";
 import { FiShoppingCart } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
+import logo from "../../../public/aditi.png";
+import { TbMenuDeep } from "react-icons/tb";
+import { FaAngleRight } from "react-icons/fa6";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
 
   return (
-    <nav className="w-full bg-[#000A24] text-white px-6 md:px-24  flex items-center justify-between mt-7 relative">
-      {/* Left - Menu Button (Mobile) */}
-      <div
-        className="flex items-center font-dm space-x-2 cursor-pointer md:hidden"
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        {isOpen ? <FaTimes className="text-2xl" /> : <FaBars className="text-xl" />}
-        <span className="text-xl font-dm">Menu</span>
-      </div>
-
-      {/* Left - Menu (Desktop Only) */}
-      <div className="hidden md:flex items-center font-dm space-x-2 cursor-pointer">
-        <FaBars className="text-xl" />
-        <span className="text-xl font-dm">Menu</span>
-      </div>
-
-      {/* Center - Logo */}
-      <div className="font-dm font-bold text-2xl tracking-widest">
-        LOGO
-      </div>
-
-      {/* Right - Cart Icon + Enquire Button */}
-      <div className="flex items-center gap-5">
-        {/* Cart Icon */}
-        <FiShoppingCart
-          className="text-2xl cursor-pointer hover:text-gray-300"
-          onClick={() => navigate("/cart")}
-        />
-        {/* Enquire Button */}
-        <button
-          className="hidden md:block border border-white px-7 py-1 rounded-full text-center text-lg transition"
-          style={{
-            background:
-              "linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(153, 153, 153, 0.08) 100%)",
-          }}
-        >
-          Enquire
-        </button>
-      </div>
-
-      {/* Mobile Menu Dropdown */}
-      {isOpen && (
-        <div className="absolute top-full left-0 w-full bg-[#000A24] flex flex-col items-center space-y-6 py-6 border-t border-white/20 md:hidden">
-          <button
-            className="border border-white px-7 py-2 rounded-full text-center text-lg transition"
-            style={{
-              background:
-                "linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(153, 153, 153, 0.08) 100%)",
-            }}
-          >
-            Enquire
-          </button>
+    <nav className="sticky top-0 z-50 w-full bg-white px-6 md:px-24 py-8 flex items-center justify-between border-b border-gray-200">
+      {/* Left Section */}
+      <div className="flex items-center gap-6">
+        <TbMenuDeep className="h-8 w-8 text-black cursor-pointer scale-x-[-1]" />
+        <div className="">
+          <img
+            src={"/svg/solar_cart-bold.svg"}
+            alt="Logo"
+            className="h-8 w-8 object-cover"
+          />
         </div>
-      )}
+      </div>
+
+      {/* Center Logo */}
+      <div className="absolute left-1/2 -translate-x-1/2 py-4">
+        <img src={logo} alt="Logo" className="h-28 w-28 object-contain" />
+      </div>
+
+      {/* Right Button */}
+      <div className="flex flex-col gap-1">
+        <div className=" hover:bg-black gap-1  rounded-full  transition flex flex-row items-center justify-center ">
+          <button className=" text-black text-md font-medium">
+            Continue Experience
+          </button>
+          <FaAngleRight size={14} className="mt-0.5" />
+        </div>
+        <div className="w-4 bg-black h-1 rounded-xl" />
+      </div>
     </nav>
   );
 };
