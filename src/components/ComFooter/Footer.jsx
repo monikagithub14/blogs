@@ -41,36 +41,36 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-black text-white px-4 sm:px-8 md:px-12 lg:px-24 py-6 md:py-8 overflow-hidden">
-      <div className="flex flex-col lg:flex-row justify-between gap-8 lg:gap-12">
+    <footer className="bg-black text-white px-4 sm:px-8 md:px-12 lg:px-24 py-6 font-poppins md:py-8 overflow-hidden">
+      <div className="flex flex-col lg:flex-row justify-between gap-8 lg:gap-12 ">
         {/* Left Section */}
         <div className="flex flex-col w-full lg:w-[30%] text-left">
           <div>
             <p className="py-3 text-lg md:text-xl font-poppins">Info Links</p>
           </div>
           <div className="flex flex-col gap-2 md:gap-3">
-            <p className="text-[#D9D9D969] text-sm md:text-base cursor-pointer hover:text-white/80 transition">
+            <p className="text-[#D9D9D969] text-sm font-poppins md:text-balance cursor-pointer hover:text-white/80 transition">
               Home
             </p>
-            <p className="text-[#D9D9D969] text-sm md:text-base cursor-pointer hover:text-white/80 transition">
+            <p className="text-[#D9D9D969] text-sm font-poppins md:text-balance cursor-pointer hover:text-white/80 transition">
               About us
             </p>
-            <p className="text-[#D9D9D969] text-sm md:text-base cursor-pointer hover:text-white/80 transition">
+            <p className="text-[#D9D9D969] text-sm font-poppins md:text-balance cursor-pointer hover:text-white/80 transition">
               Blogs
             </p>
-            <p className="text-[#D9D9D969] text-sm md:text-base cursor-pointer hover:text-white/80 transition">
+            <p className="text-[#D9D9D969] text-sm font-poppins md:text-balance cursor-pointer hover:text-white/80 transition">
               Contact Us
             </p>
-            <p className="text-[#D9D9D969] text-sm md:text-base cursor-pointer hover:text-white/80 transition">
+            <p className="text-[#D9D9D969] text-sm font-poppins md:text-balance cursor-pointer hover:text-white/80 transition">
               Psychometric Test
             </p>
-            <p className="text-[#D9D9D969] text-sm md:text-base cursor-pointer hover:text-white/80 transition">
+            <p className="text-[#D9D9D969] text-sm font-poppins md:text-balance cursor-pointer hover:text-white/80 transition">
               Explore Gardens
             </p>
-            <p className="text-[#D9D9D969] text-sm md:text-base cursor-pointer hover:text-white/80 transition">
+            <p className="text-[#D9D9D969] text-sm font-poppins md:text-balance cursor-pointer hover:text-white/80 transition">
               My Cart
             </p>
-            <p className="text-[#D9D9D969] text-sm md:text-base cursor-pointer hover:text-white/80 transition">
+            <p className="text-[#D9D9D969] text-sm font-poppins md:text-balance cursor-pointer hover:text-white/80 transition">
               Products
             </p>
           </div>
@@ -79,26 +79,26 @@ const Footer = () => {
         {/* Middle Section */}
         <div className="flex flex-col w-full lg:w-[30%] space-y-4 mt-3 md:space-y-5">
           <div className="flex flex-col gap-1">
-            <p className="transition font-rafgins text-base md:text-xl">
+            <p className="transition font-rafgins text-balance md:text-xl">
               Location
             </p>
-            <p className="text-sm md:text-base text-[#D9D9D969]/40">
+            <p className="text-sm font-poppins md:text-balance text-[#D9D9D969]/40">
               Nation pride, <br /> Golden City Streets, france 345678
             </p>
           </div>
           <div className="flex flex-col gap-1">
-            <p className="transition font-rafgins text-base md:text-lg">
+            <p className="transition font-rafgins text-balance md:text-lg">
               Contact
             </p>
-            <p className="text-sm md:text-base text-[#D9D9D969]/40">
+            <p className="text-sm font-poppins md:text-balance text-[#D9D9D969]/40">
               +91 999 999 9999
             </p>
           </div>
           <div className="flex flex-col gap-1">
-            <p className="transition font-rafgins text-base md:text-lg">
+            <p className="transition font-rafgins text-balance md:text-lg">
               Email ID
             </p>
-            <p className="text-sm md:text-base text-[#D9D9D969]/40">
+            <p className="text-sm font-poppins md:text-balance text-[#D9D9D969]/40">
               maisonaditi@gmail.com
             </p>
           </div>
@@ -106,17 +106,17 @@ const Footer = () => {
           <div className="flex flex-row gap-3 md:gap-4 mt-2">
             {/* <div className="h-8 w-8 md:h-9 md:w-9 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition cursor-pointer"> */}
             <div className="h-8 w-8 md:h-9 md:w-9 flex items-center justify-center cursor-pointer">
-              <FaTiktok className="text-white text-sm md:text-base" />
+              <FaTiktok className="text-white text-sm font-poppins md:text-balance" />
             </div>
 
             {/* <div className="h-8 w-8 md:h-9 md:w-9 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition cursor-pointer"> */}
             <div className="h-8 w-8 md:h-9 md:w-9 flex items-center justify-center cursor-pointer">
-              <FaFacebookF className="text-white text-sm md:text-base" />
+              <FaFacebookF className="text-white text-sm font-poppins md:text-balance" />
             </div>
 
             {/* <div className="h-8 w-8 md:h-9 md:w-9 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition cursor-pointer"> */}
             <div className="h-8 w-8 md:h-9 md:w-9 flex items-center justify-center cursor-pointer">
-              <FaInstagram className="text-white text-sm md:text-base" />
+              <FaInstagram className="text-white text-sm font-poppins md:text-balance" />
             </div>
           </div>
         </div>
@@ -128,7 +128,7 @@ const Footer = () => {
             className="w-full font-rafgins text-white space-y-5 md:space-y-6"
           >
             {/* Title */}
-            <p className="text-base md:text-xl mb-4">Stay Connected</p>
+            <p className="text-balance md:text-xl mb-4">Stay Connected</p>
 
             {/* Name */}
             <div className="relative">
@@ -139,7 +139,7 @@ const Footer = () => {
                 onChange={handleChange}
                 placeholder="Name"
                 required
-                className="w-full bg-transparent text-white text-sm md:text-base outline-none pb-2 placeholder-white/60 focus:placeholder-white/40 transition"
+                className="w-full bg-transparent text-white text-sm font-poppins md:text-balance outline-none pb-2 placeholder-white/60 focus:placeholder-white/40 transition"
               />
               <div className="border-b border-white/40" />
             </div>
@@ -153,7 +153,7 @@ const Footer = () => {
                 onChange={handleChange}
                 placeholder="Email"
                 required
-                className="w-full bg-transparent text-white text-sm md:text-base outline-none pb-2 placeholder-white/60 focus:placeholder-white/40 transition"
+                className="w-full bg-transparent text-white text-sm font-poppins md:text-balance outline-none pb-2 placeholder-white/60 focus:placeholder-white/40 transition"
               />
               <div className="border-b border-white/40" />
             </div>
@@ -167,7 +167,7 @@ const Footer = () => {
                 onChange={handleChange}
                 placeholder="Contact No"
                 required
-                className="w-full bg-transparent text-white text-sm md:text-base outline-none pb-2 placeholder-white/60 focus:placeholder-white/40 transition"
+                className="w-full bg-transparent text-white text-sm font-poppins md:text-balance outline-none pb-2 placeholder-white/60 focus:placeholder-white/40 transition"
               />
               <div className="border-b border-white/40" />
             </div>
@@ -181,7 +181,7 @@ const Footer = () => {
                 onChange={handleChange}
                 placeholder="Message"
                 required
-                className="w-full bg-transparent text-white text-sm md:text-base outline-none resize-none pb-2 placeholder-white/60 focus:placeholder-white/40 transition"
+                className="w-full bg-transparent text-white text-sm font-poppins md:text-balance outline-none resize-none pb-2 placeholder-white/60 focus:placeholder-white/40 transition"
               />
               <div className="border-b border-white/40" />
             </div>
@@ -192,7 +192,7 @@ const Footer = () => {
               disabled={isLoading}
               className="flex items-center justify-between w-full mt-4 disabled:opacity-50 disabled:cursor-not-allowed group"
             >
-              <p className="text-sm md:text-base font-montserrat tracking-wide border-b border-white pb-1 group-hover:border-white/70 transition">
+              <p className="text-sm font-poppins md:text-balance font-montserrat tracking-wide border-b border-white pb-1 group-hover:border-white/70 transition">
                 {isLoading ? "Connecting..." : "Connect"}
               </p>
               {isLoading ? (
@@ -208,7 +208,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom Copyright Section */}
-      <div className="border-t border-gray-700 mt-6 md:mt-8 pt-4 md:pt-5 flex flex-col md:flex-row justify-between items-center gap-3 md:gap-0 text-xs md:text-sm font-rafgins text-gray-400">
+      <div className="border-t border-gray-700 mt-6 md:mt-8 pt-4 md:pt-5 flex flex-col md:flex-row justify-between items-center gap-3 md:gap-0 text-xs md:text-sm font-poppins font-rafgins text-gray-400">
         <p className="text-center md:text-left">
           ©2025 All Copyrights Reserved
         </p>

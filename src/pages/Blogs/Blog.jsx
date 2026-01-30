@@ -36,7 +36,7 @@ const Blog = () => {
         <div className="relative z-10 w-full">
           {/* Hero */}
           <header className="flex flex-col items-center gap-5 text-center mt-32 md:mt-60 px-4">
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif leading-tight text-white">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-montserrat font-semibold    leading-tight text-white">
               Words Infused With Fragrance,
               <br className="hidden md:block" />
               <span className="text-white bg-clip-text block md:inline md:mt-0">
@@ -44,10 +44,11 @@ const Blog = () => {
               </span>
             </h1>
 
-            <p className="mt-3 md:mt-3 max-w-2xl text-white text-xs md:text-sm leading-relaxed px-4">
-              a sacred space where stories of scent, divinity, and inner
+            <p className="mt-3 md:mt-3 max-w-2xl text-white text-xs md:text-sm leading-relaxed px-4 font-poppins font-medium">
+              A sacred space where stories of scent, divinity, and inner
               awakening unfold.
-              <br />
+              <br className="" />
+              <div className="mt-2"></div>
               Here, fragrance is more than aroma; it is memory, energy, and
               ritual.
             </p>
@@ -57,7 +58,9 @@ const Blog = () => {
                 className="flex items-center gap-0.5 mt-4 md:mt-3 sm:gap-1 text-white text-xs sm:text-sm md:text-md font-medium whitespace-nowrap"
                 // onClick={() => navigate("/continue-experience")}
               >
-                <span className="hidden sm:inline">Continue Experience</span>
+                <span className="hidden sm:inline font-medium fontpop text-lg">
+                  Continue Experience
+                </span>
                 <span className="sm:hidden">Continue</span>
                 <FaAngleRight
                   size={12}
