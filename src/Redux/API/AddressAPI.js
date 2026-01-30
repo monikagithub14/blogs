@@ -16,6 +16,14 @@ export const AddressAPI = createApi({
       }),
       invalidatesTags: ["Address"],
     }),
+    submitContactForm: builder.mutation({
+      query: (address) => ({
+        url: "cart/addAddress",
+        method: "POST",
+        body: address,
+      }),
+      invalidatesTags: ["Address"],
+    }),
     getlastAddress: builder.query({
       query: () => "cart/lastAddress",
       method: "GET",
@@ -31,8 +39,9 @@ export const AddressAPI = createApi({
   }),
 });
 
-export const { 
-  useAddAddressMutation, 
-  useGetlastAddressQuery ,
-  useDeleteAddressMutation
+export const {
+  useAddAddressMutation,
+  useGetlastAddressQuery,
+  useDeleteAddressMutation,
+  useSubmitContactFormMutation,
 } = AddressAPI;

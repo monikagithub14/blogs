@@ -5,13 +5,14 @@ import Footer from "../ComFooter/Footer";
 
 const Layout = () => {
   const location = useLocation();
-  const hideLayout = [""];
+  const hideLayout = ["/signin", "/signup"];
+  const hideLayoutFooter = ["/signin", "/contact-us", "/signup"];
 
   return (
     <>
       {!hideLayout.includes(location.pathname) && <Navbar />}
       <Outlet />
-      {!hideLayout.includes(location.pathname) && <Footer />}
+      {!hideLayoutFooter.includes(location.pathname) && <Footer />}
     </>
   );
 };

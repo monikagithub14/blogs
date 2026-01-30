@@ -1,0 +1,119 @@
+// import React from "react";
+// import background from "../../../public/ContactUsBgImage2.jpg";
+
+// const ContactUs = () => {
+//   return (
+//     <div
+//       className="w-full inset-0 h-screen overflow-y-hidden bg-no-repeat bg-cover bg-top"
+//       style={{
+//         backgroundImage: `url(${background})`,
+//       }}
+//     ></div>
+//   );
+// };
+
+// export default ContactUs;
+
+import React from "react";
+import background from "../../public/ContactUsBgImage2.jpg";
+import {
+  ArrowUpRightFromSquare,
+  GitPullRequestCreateArrow,
+} from "lucide-react";
+import { MdKeyboardArrowRight } from "react-icons/md";
+
+const ContactUs = () => {
+  return (
+    <div
+      className="w-full h-screen overflow-hidden bg-cover bg-center relative"
+      style={{ backgroundImage: `url(${background})` }}
+    >
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-black/30"></div>
+
+      {/* Content */}
+      <div className="relative z-10 flex h-full w-full justify-center items-center px-6 md:px-20">
+        {/* Left Text Section */}
+        <div className="hidden md:flex w-1/2 text-white text-center justify-center">
+          <h1 className="text-4xl font-light leading-snug">
+            We Welcome Your <br />
+            <span className="font-medium">Energy !!</span>
+            <div className="absolute top-0 left-0 w bg-black/30 w-1/2 h-full"></div>
+          </h1>
+        </div>
+
+        {/* Right Form Card */}
+        <div className="w-full md:w-1/2 flex justify-end pr-4">
+          <div className="bg-white w-full max-w-md p-8 shadow-xl">
+            <h2 className="text-sm font-semibold tracking-wide font-poppins">
+              EVERY CONNECTION BEGINS WITH INTENTION.
+            </h2>
+            <p className="text-xs text-gray-500 mb-6 font-poppins">
+              Reach Out To Us
+            </p>
+
+            <form className="space-y-4">
+              <input
+                type="text"
+                placeholder="Name*"
+                className="w-full border bg-black/5 px-3 py-2 text-sm focus:outline-none"
+              />
+
+              <div className="flex gap-3">
+                <input
+                  type="email"
+                  placeholder="Email Address*"
+                  className="w-1/2 border bg-black/5 px-3 py-2 text-sm focus:outline-none"
+                />
+                <input
+                  type="text"
+                  placeholder="Contact No*"
+                  className="w-1/2 border bg-black/5 px-3 py-2 text-sm focus:outline-none"
+                />
+              </div>
+
+              <div className="flex gap-3">
+                <input
+                  type="text"
+                  placeholder="Country*"
+                  className="w-1/2 border bg-black/5 px-3 py-2 text-sm focus:outline-none"
+                />
+                <input
+                  type="text"
+                  placeholder="Order No*"
+                  className="w-1/2 border bg-black/5 px-3 py-2 text-sm focus:outline-none"
+                />
+              </div>
+
+              <p className="text-xs text-gray-500 font-montserrat">
+                Your words are sacred to us, please share your message below,
+                and our team will respond with care.
+              </p>
+
+              <textarea
+                placeholder="Message*"
+                rows="4"
+                className="w-full border px-3 py-2 text-sm focus:outline-none"
+              ></textarea>
+              <div className=" w-full flex items-center justify-center flex-col relative">
+                {" "}
+                <button
+                  type="submit"
+                  className="text-sm flex flex-row justify-center items-center gap-3 "
+                >
+                  Connect With Us <MdKeyboardArrowRight />
+                </button>
+                <div className=" absolute left-1/3 w-1/6 h-0.5 bg-black" />
+                <p className="text-[10px] text-gray-400 mt-3">
+                  INSTAGRAM | WHATSAPP | TIKTOK
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ContactUs;

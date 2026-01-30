@@ -145,8 +145,8 @@ import React, { useEffect, useState } from "react";
 import { ShoppingBag, MapPin, User, Phone, PencilLine } from "lucide-react";
 import OrdersScreen from "./MyOrders";
 import AddressScreen from "./Address";
-import { useGetmeQuery } from "../../Redux/API/UsersAPI";
-import { useGetMyOrdersQuery } from "../../Redux/API/OrderAPI";
+import { useGetmeQuery } from "../Redux/API/UsersAPI";
+import { useGetMyOrdersQuery } from "../Redux/API/OrderAPI";
 import MenuPopup from "../Menu";
 import { useLocation } from "react-router-dom";
 const DashboardLayout = () => {

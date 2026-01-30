@@ -24,13 +24,33 @@ export const UsersAPI = createApi({
       method: "GET",
       providesTags: ["Users"],
     }),
-
     getme: builder.query({
       query: () => "getme",
       method: "GET",
       providesTags: ["Users"],
     }),
+    sendOtp: builder.mutation({
+      query: (data) => ({
+        url: "send-otp",
+        method: "POST",
+        body: data,
+      }),
+    }),
+    verifyOtp: builder.mutation({
+      query: (data) => ({
+        url: "verify-otp",
+        method: "POST",
+        body: data,
+      }),
+      invalidatesTags: ["Users"],
+    }),
   }),
 });
 
-export const { useDirectLoginMutation,useGetmeQuery ,useGetUserProfileQuery } = UsersAPI;
+export const {
+  useDirectLoginMutation,
+  useGetmeQuery,
+  useGetUserProfileQuery,
+  useSendOtpMutation,
+  useVerifyOtpMutation,
+} = UsersAPI;

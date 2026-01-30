@@ -5,7 +5,6 @@ import { UsersAPI } from "./API/UsersAPI";
 import { AddressAPI } from "./API/AddressAPI";
 import { OrderAPI } from "./API/OrderAPI";
 
-
 const store = configureStore({
   reducer: {
     [ProductsAPI.reducerPath]: ProductsAPI.reducer,
@@ -24,4 +23,4 @@ const store = configureStore({
   ],
 });
 
-export default store;
+export { store };

@@ -6,9 +6,13 @@ import Layout from "./components/Layout/Layout.jsx";
 import "./styles/fonts.css";
 
 import Blog from "./pages/Blogs/Blog.jsx";
+import BlogDetail from "./pages/Blogs/BlogDetail.jsx";
 import { Provider } from "react-redux";
-import { store } from "./redux/store.js";
-import MyAccount from "./components/MyAccount.jsx";
+import { store } from "./Redux/store.js";
+import ContactUs from "./pages/ContactUs.jsx";
+import Login from "./pages/Login.jsx";
+import SignUp from "./pages/SignUp.jsx";
+// import MyAccount from "./components/MyAccount.jsx";
 
 function AppContent() {
   const [isLoading, setIsLoading] = useState(true);
@@ -26,7 +30,11 @@ function AppContent() {
     <Routes>
       <Route element={<Layout />}>
         <Route path="/" element={<Blog />} />
-        <Route path="/my-account" element={<MyAccount />} />
+        <Route path="/signin" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/blog/:blog" element={<BlogDetail />} />
+        <Route path="/contact-us" element={<ContactUs />} />
+        {/* <Route path="/my-account" element={<MyAccount />} /> */}
       </Route>
     </Routes>
   );
