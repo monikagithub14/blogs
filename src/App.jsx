@@ -1,20 +1,18 @@
-
 // App.jsx
 import React, { useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
-import Navbar from "./components/CompHeader/Navbar.jsx";
-
+import Layout from "./components/Layout/Layout.jsx";
 
 import "./styles/fonts.css";
 
-
 import Blog from "./pages/Blogs/Blog.jsx";
+import { Provider } from "react-redux";
+import { store } from "./redux/store.js";
+import MyAccount from "./components/MyAccount.jsx";
 
 function AppContent() {
   const [isLoading, setIsLoading] = useState(true);
   const [showPopup, setShowPopup] = useState(false);
-  // const [soundOn, setSoundOn] = useState(true); // Is this here?
-  const navigate = useNavigate();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -24,21 +22,13 @@ function AppContent() {
     return () => clearTimeout(timer);
   }, []);
 
- 
-
   return (
-    <>
-    <Navbar />
-      <Routes>
-      
-
-    
-
-        
+    <Routes>
+      <Route element={<Layout />}>
         <Route path="/" element={<Blog />} />
-        
-      </Routes>
-    </>
+        <Route path="/my-account" element={<MyAccount />} />
+      </Route>
+    </Routes>
   );
 }
 
@@ -46,7 +36,9 @@ function App() {
   return (
     <div className="">
       <BrowserRouter>
-        <AppContent />
+        <Provider store={store}>
+          <AppContent />
+        </Provider>
       </BrowserRouter>
     </div>
   );

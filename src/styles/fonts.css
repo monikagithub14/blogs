@@ -1,6 +1,9 @@
 @font-face {
-    font-family: 'Amandine';
-    src: url('/fonts/fonnts.com-Amandine_Medium.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Amandine";
+  src: url("/fonts/fonnts.com-Amandine_Medium.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "Poppins", sans-serif;
 }

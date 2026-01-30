@@ -3,28 +3,28 @@ import { useSound } from "../../context/SoundContext";
 import { useEffect, useRef } from "react";
 
 export default function SideArrows({ onPrev, onNext }) {
- const {soundOn} = useSound();
- const hoverSoundRef = useRef(null);
-     const clickSoundRef = useRef(null);
-   
-     useEffect(() => {
-       hoverSoundRef.current = new Audio("/sounds/flower_hover.mp3");
-       clickSoundRef.current = new Audio("/sounds/click.mp3");
-   
-       hoverSoundRef.current.volume = 0.5;
-       clickSoundRef.current.volume = 0.7;
-     }, []);
-      const playHoverSound = () => {
-        if (!soundOn || !hoverSoundRef.current) return; // ✅ Check soundOn
-        hoverSoundRef.current.currentTime = 0;
-        hoverSoundRef.current.play().catch(() => {}); // Catch browser-block errors
-      };
- 
-      const playClickSound = () => {
-        if (!soundOn || !clickSoundRef.current) return; // ✅ Check soundOn
-        clickSoundRef.current.currentTime = 0;
-        clickSoundRef.current.play().catch(() => {});
-      };
+  const { soundOn } = useSound();
+  const hoverSoundRef = useRef(null);
+  const clickSoundRef = useRef(null);
+
+  useEffect(() => {
+    hoverSoundRef.current = new Audio("/sounds/flower_hover.mp3");
+    clickSoundRef.current = new Audio("/sounds/click.mp3");
+
+    hoverSoundRef.current.volume = 0.5;
+    clickSoundRef.current.volume = 0.7;
+  }, []);
+  const playHoverSound = () => {
+    if (!soundOn || !hoverSoundRef.current) return; // ✅ Check soundOn
+    hoverSoundRef.current.currentTime = 0;
+    hoverSoundRef.current.play().catch(() => {}); // Catch browser-block errors
+  };
+
+  const playClickSound = () => {
+    if (!soundOn || !clickSoundRef.current) return; // ✅ Check soundOn
+    clickSoundRef.current.currentTime = 0;
+    clickSoundRef.current.play().catch(() => {});
+  };
   return (
     <>
       {/* 🚀 RESPONSIVE UPDATE: Change fixed ml-10 to responsive padding */}
@@ -50,7 +50,6 @@ export default function SideArrows({ onPrev, onNext }) {
         <button
           onMouseEnter={playHoverSound}
           onClick={onNext}
-          // 🚀 RESPONSIVE UPDATE: Ensure icon size is adjustable if needed
           className="pointer-events-auto backdrop-blur-xs bg-white/15 border border-white hover:bg-white/20 p-2 sm:p-3 rounded-full transition-all duration-300"
         >
           <IoIosArrowForward className="w-5 h-5" />
