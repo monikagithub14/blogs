@@ -6,7 +6,7 @@ import Footer from "../ComFooter/Footer";
 const Layout = () => {
   const location = useLocation();
   const hideLayout = ["/signin", "/signup"];
-  const hideLayoutFooter = ["/signin", "/contact-us", "/signup"];
+  const hideLayoutFooter = ["/signin", "/signup"];
 
   return (
     <>

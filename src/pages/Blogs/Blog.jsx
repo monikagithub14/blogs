@@ -102,10 +102,10 @@ const Blog = () => {
       </div>
       {/* Heading */}
       <div className="bg-white text-black flex flex-col px-6 md:px-24 md:flex-row justify-between items-start md:items-end ">
-        <h2 className="text-3xl md:text-4xl font-serif max-w-md mb-4 md:mb-0">
+        <h2 className="text-3xl font-montserrat md:text-4xl leading-10 max-w-md mb-4 md:mb-0">
           Where Fragrance Meets Consciousness
         </h2>
-        <p className="text-xs max-w-md text-gray-500 md:text-right">
+        <p className="text-xs max-w-md text-gray-500 md:text-right font-medium">
           Welcome to the Maison Aditi Journal a realm where fragrance becomes
           <br className="hidden md:block" /> a prayer, stories flow like
           incense, and every word carries The Essence
@@ -124,7 +124,8 @@ const Blog = () => {
               <button
                 key={index}
                 onClick={() => setActiveFilter(index)}
-                className={`px-3 md:px-6 py-2 rounded-full text-[11px] uppercase tracking-wide 
+                className={`px-3 md:px-6 py-2 font-medium
+                   rounded-full text-[11px] tracking-wide 
                                     transition-all duration-300 whitespace-nowrap flex-shrink-0
                                     ${
                                       activeFilter === index
@@ -156,7 +157,7 @@ const Blog = () => {
                   Fragrance As A Ritual: When Scent Becomes Sacred
                 </h3>
 
-                <p className="text-xs md:text-sm text-gray-600 font-poppins font-light mb-4 md:mb-6 leading-relaxed">
+                <p className="text-xs md:text-sm text-gray-600 font-poppins font-medium mb-4 md:mb-6 leading-relaxed">
                   Fragrance has always been more than a sensory pleasure. Across{" "}
                   <br className="hidden md:block" /> cultures and centuries,
                   scent has been used as ritual a bridge{" "}
@@ -164,8 +165,8 @@ const Blog = () => {
                   unseen.
                 </p>
 
-                <button className="flex items-center gap-2 md:gap-4 text-xs md:text-sm font-bold tracking-wider  text-[#999999]">
-                  <span className="bg-black text-white rounded-full p-2 font-semibold">
+                <button className="flex items-center gap-2 md:gap-4 text-xs md:text-sm tracking-wider  text-[#999999]">
+                  <span className="bg-black text-white rounded-full p-2 font-medium">
                     <MdOutlineKeyboardArrowRight color="white" size={15} />
                   </span>
                   Read More
