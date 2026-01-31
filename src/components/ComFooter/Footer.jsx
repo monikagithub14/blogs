@@ -79,7 +79,7 @@ const Footer = () => {
         {/* Middle Section */}
         <div className="flex flex-col w-full lg:w-[30%] space-y-4 mt-3 md:space-y-5">
           <div className="flex flex-col gap-1">
-            <p className="transition font-rafgins text-balance md:text-xl">
+            <p className="transition font-rafgins text-balance pb-2 md:text-xl">
               Location
             </p>
             <p className="text-sm  font-poppins md:text-[15px] text-[#D9D9D969]/40">
@@ -139,7 +139,7 @@ const Footer = () => {
                 onChange={handleChange}
                 placeholder="Name"
                 required
-                className="w-full bg-transparent text-white text-sm font-poppins md:text-[15px] outline-none pb-2 placeholder-white/ focus:placeholder-white/40 transition"
+                className="w-full bg-transparent text-white text-sm font-poppins md:text-[15px] outline-none pb-2 placeholder-[#D9D9D969] focus:placeholder-white/40 transition"
               />
               <div className="border-b border-white/40" />
             </div>
@@ -153,7 +153,7 @@ const Footer = () => {
                 onChange={handleChange}
                 placeholder="Email"
                 required
-                className="w-full bg-transparent text-white text-sm font-poppins md:text-[15px] outline-none pb-2 placeholder-white/ focus:placeholder-white/40 transition"
+                className="w-full bg-transparent text-white text-sm font-poppins md:text-[15px] outline-none pb-2 placeholder-[#D9D9D969] focus:placeholder-white/40 transition"
               />
               <div className="border-b border-white/40" />
             </div>
@@ -167,7 +167,7 @@ const Footer = () => {
                 onChange={handleChange}
                 placeholder="Contact No"
                 required
-                className="w-full bg-transparent text-white text-sm font-poppins md:text-[15px] outline-none pb-2 placeholder-white/ focus:placeholder-white/40 transition"
+                className="w-full bg-transparent text-white text-sm font-poppins md:text-[15px] outline-none pb-2 placeholder-[#D9D9D969] focus:placeholder-white/40 transition"
               />
               <div className="border-b border-white/40" />
             </div>
@@ -181,7 +181,7 @@ const Footer = () => {
                 onChange={handleChange}
                 placeholder="Message"
                 required
-                className="w-full bg-transparent text-white text-sm font-poppins md:text-[15px] outline-none resize-none pb-2 placeholder-white/ focus:placeholder-white/40 transition"
+                className="w-full bg-transparent text-white text-sm font-poppins md:text-[15px] outline-none resize-none pb-2 placeholder-[#D9D9D969] focus:placeholder-white/40 transition"
               />
               <div className="border-b border-white/40" />
             </div>

@@ -85,29 +85,29 @@ const Login = () => {
                 bg-white backdrop-blur-md
                 border border-white/10
                 rounded-2xl px-6 py-8 sm:px-8 sm:py-10 lg:px-10 text-white
-                shadow-[0_10px_50px_rgba(0,0,0,0.3)] flex flex-col"
+                flex flex-col"
         >
           {/* LOGO */}
           <div className="flex flex-col items-center">
             <img
               src="/logoBlack.png"
               alt="Aditi Logo"
-              className=" size-24 mb-2 opacity-90"
+              className=" size-36 opacity-90"
             />
           </div>
 
-          <h2 className="text-center font-montserrat text-3xl mb-8 opacity-90 mt-4 lg:mt-12 font-medium text-black">
+          <h2 className="text-center font-montserrat text-3xl mb-8 opacity-90 font-medium text-black">
             {step === 1 ? "Sign In" : "Verify OTP"}
           </h2>
 
           <form
             onSubmit={step === 1 ? handleSendOtp : handleVerifyOtp}
-            className="flex-1 flex flex-col"
+            className="flex-1 flex flex-col mt-10"
           >
             {step === 1 ? (
               // STEP 1: EMAIL INPUT
-              <div className="flex font-sans items-center border-b border-black/30 mb-6 pb-2 transition-colors focus-within:border-black/80">
-                <FiMail className="mr-3 text-black/70 text-lg" />
+              <div className="flex font-sans items-center border-b border-black/10 mb-6 pb-2 transition-colors focus-within:border-black/80">
+                <FiMail className="mr-2 text-black/70 text-lg" />
                 <input
                   type="email"
                   value={email}
@@ -115,15 +115,16 @@ const Login = () => {
                     setEmail(e.target.value);
                     setErrorMsg("");
                   }}
-                  placeholder="Enter Your Email"
+                  placeholder="Email Address"
                   className="w-full bg-transparent border-b-0 outline-none
                                 placeholder-black/60 text-sm text-black"
                 />
               </div>
             ) : (
               // STEP 2: OTP INPUT
-              <div className="flex font-sans items-center border-b border-black/30 mb-6 pb-2 transition-colors focus-within:border-black/80">
-                <FiLock className="mr-3 text-black/70 text-lg" />
+              <div className="flex font-sans items-center border-b border-black/10 mb-6 pb-2 transition-colors focus-within:border-black/80">
+                {/* <FiLock className="mr-2 text-black/70 text-lg" /> */}
+                <img src="/svg/OTP.svg" className="size-4 mr-2" alt="" />
                 <input
                   type="text"
                   value={otp}
@@ -131,7 +132,7 @@ const Login = () => {
                     setOtp(e.target.value);
                     setErrorMsg("");
                   }}
-                  placeholder="Enter OTP"
+                  placeholder="OTP"
                   className="w-full bg-transparent border-b-0 outline-none
                                 placeholder-black/60 text-sm text-black"
                 />

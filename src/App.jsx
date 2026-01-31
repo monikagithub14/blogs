@@ -12,6 +12,7 @@ import { store } from "./Redux/store.js";
 import ContactUs from "./pages/ContactUs.jsx";
 import Login from "./pages/Login.jsx";
 import SignUp from "./pages/SignUp.jsx";
+import MyAccount from "./components/MyAccount.jsx";
 // import MyAccount from "./components/MyAccount.jsx";
 
 function AppContent() {
@@ -34,7 +35,7 @@ function AppContent() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/blog/:blog" element={<BlogDetail />} />
         <Route path="/contact-us" element={<ContactUs />} />
-        {/* <Route path="/my-account" element={<MyAccount />} /> */}
+        <Route path="/my-account" element={<MyAccount />} />
       </Route>
     </Routes>
   );

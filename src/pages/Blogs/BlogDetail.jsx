@@ -10,11 +10,11 @@ const IntroductionSection = () => {
     offset: ["start end", "end start"],
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], ["20%", "-40%"]);
+  const y = useTransform(scrollYProgress, [0, 1], ["20%", "-90%"]);
   const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
 
   return (
-    <div ref={containerRef} className="relative h-[300vh]">
+    <div ref={containerRef} className="relative h-[500vh]">
       <div className="sticky top-0 h-screen flex flex-col items-center justify-center gap-12 overflow-hidden">
         <motion.p
           style={{ opacity }}
@@ -108,7 +108,7 @@ const BlogDetail = () => {
           Stories inspired by divinity, consciousness, and craft. Thoughtfully
           written from <br /> the world of Maison Aditi.
         </p>
-        <div className="flex flex-col gap-2 sm:gap-2 items-center justify-center">
+        {/* <div className="flex flex-col gap-2 sm:gap-2 items-center justify-center">
           <button className="flex items-center gap-0.5 mt-4 md:mt-3 sm:gap-1 text-black text-xs sm:text-sm md:text-md font-medium whitespace-nowrap">
             <span className="hidden sm:inline font-medium font-poppins">
               Read More Below
@@ -120,7 +120,24 @@ const BlogDetail = () => {
             />
           </button>
           <div className="w-4 sm:w-5 bg-black h-0.5 sm:h-1 rounded-xl" />
+        </div> */}
+        <div className="flex flex-col gap-2 sm:gap-2 items-center justify-center">
+          <button
+            className="flex items-center relative gap-0.5 mt-4 md:mt-3 sm:gap-1 text-black text-xs sm:text-sm md:text-md font-medium whitespace-nowrap"
+            // onClick={() => navigate("/continue-experience")}
+          >
+            <span className="hidden sm:inline font-medium fontpop text-lg">
+              Read More Below
+            </span>
+            <span className="sm:hidden">Continue</span>
+            <FaAngleRight
+              size={12}
+              className="sm:w-3.5 sm:h-3.5 md:w-4 md:h-4"
+            />
+            <div className="absolute -bottom-1 w-4 sm:w-5 bg-black h-0.5 sm:h-1 rounded-xl" />
+          </button>
         </div>
+
         <div>
           <img src="/blogDetailHero.png" className="w-full " alt="" />
         </div>

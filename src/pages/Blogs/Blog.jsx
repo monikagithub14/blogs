@@ -55,7 +55,7 @@ const Blog = () => {
 
             <div className="flex flex-col gap-2 sm:gap-2 items-center justify-center">
               <button
-                className="flex items-center gap-0.5 mt-4 md:mt-3 sm:gap-1 text-white text-xs sm:text-sm md:text-md font-medium whitespace-nowrap"
+                className="flex items-center relative gap-0.5 mt-4 md:mt-3 sm:gap-1 text-white text-xs sm:text-sm md:text-md font-medium whitespace-nowrap"
                 // onClick={() => navigate("/continue-experience")}
               >
                 <span className="hidden sm:inline font-medium fontpop text-lg">
@@ -66,8 +66,8 @@ const Blog = () => {
                   size={12}
                   className="sm:w-3.5 sm:h-3.5 md:w-4 md:h-4"
                 />
+                <div className="absolute -bottom-1 w-4 sm:w-5 bg-white h-0.5 sm:h-1 rounded-xl" />
               </button>
-              <div className="w-4 sm:w-5 bg-white h-0.5 sm:h-1 rounded-xl" />
             </div>
             {/* <div className="mt-8 md:mt-12 text-xs md:text-sm uppercase tracking-widest text-white">
             Let Your{" "}
@@ -118,7 +118,7 @@ const Blog = () => {
       </div>
 
       {/* Content Section */}
-      <div className="bg-black/5 rounded-xl mx-4 md:mx-24 my-8 pt-8">
+      <div className="bg-black/5 rounded-xl mx-4 md:mx-24 pt-8 mt-8 mb-10 md:mb-24">
         <section className="px-4 md:px-16 pb-12 md:pb-16 flex flex-col gap-8">
           <div
             className="flex items-center gap-6  overflow-x-auto w-full [&::-webkit-scrollbar]:hidden"

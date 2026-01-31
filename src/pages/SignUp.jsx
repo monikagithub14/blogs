@@ -72,24 +72,24 @@ const SignUp = () => {
                 bg-white backdrop-blur-md
                 border border-white/10
                 rounded-2xl px-6 py-8 sm:px-8 sm:py-10 lg:px-10 text-white
-                shadow-[0_10px_50px_rgba(0,0,0,0.3)] flex flex-col"
+                flex flex-col"
         >
           <div className="flex flex-col items-center">
             <img
               src="/logoBlack.png"
               alt="Aditi Logo"
-              className="size-24 mb-2 opacity-90"
+              className="size-36 opacity-90"
             />
           </div>
 
-          <h2 className="text-center font-montserrat text-3xl mb-8 opacity-90 mt-4 lg:mt-12 font-medium text-black">
+          <h2 className="text-center font-montserrat text-3xl mb-8 opacity-90 font-medium text-black">
             Sign Up
           </h2>
 
-          <form onSubmit={handleSignUp} className="flex-1 flex flex-col gap-4">
+          <form onSubmit={handleSignUp} className="flex-1 flex flex-col mt-10">
             {/* NAME */}
-            <div className="flex font-sans items-center border-b border-black/30 pb-2 transition-colors focus-within:border-black/80">
-              <FiUser className="mr-3 text-black/70 text-lg" />
+            <div className="flex font-sans items-center border-b border-black/10 mb-6 pb-2 transition-colors focus-within:border-black/80">
+              <FiUser className="mr-2 text-black/70 text-lg" />
               <input
                 type="text"
                 name="name"
@@ -102,8 +102,8 @@ const SignUp = () => {
             </div>
 
             {/* MOBILE */}
-            <div className="flex font-sans items-center border-b border-black/30 pb-2 transition-colors focus-within:border-black/80">
-              <FiPhone className="mr-3 text-black/70 text-lg" />
+            <div className="flex font-sans items-center border-b border-black/10 mb-6 pb-2 transition-colors focus-within:border-black/80">
+              <FiPhone className="mr-2 text-black/70 text-lg" />
               <input
                 type="tel"
                 name="phone"
@@ -116,8 +116,8 @@ const SignUp = () => {
             </div>
 
             {/* EMAIL */}
-            <div className="flex font-sans items-center border-b border-black/30 pb-2 transition-colors focus-within:border-black/80">
-              <FiMail className="mr-3 text-black/70 text-lg" />
+            <div className="flex font-sans items-center border-b border-black/10 mb-6 pb-2 transition-colors focus-within:border-black/80">
+              <FiMail className="mr-2 text-black/70 text-lg" />
               <input
                 type="email"
                 name="email"
@@ -130,8 +130,8 @@ const SignUp = () => {
             </div>
 
             {/* COUNTRY */}
-            <div className="flex font-sans items-center border-b border-black/30 pb-2 transition-colors focus-within:border-black/80">
-              <FiMapPin className="mr-3 text-black/70 text-lg" />
+            <div className="flex font-sans items-center border-b border-black/10 mb-6 pb-2 transition-colors focus-within:border-black/80">
+              <FiMapPin className="mr-2 text-black/70 text-lg" />
               <input
                 type="text"
                 name="country"
