@@ -104,11 +104,12 @@ const Blog = () => {
         {/* <Footer /> */}
       </div>
       {/* Heading */}
-      <div className="bg-white text-black flex flex-col px-6 md:px-24 md:flex-row justify-between items-start md:items-end ">
+      {/* <div className="bg-white text-black flex flex-col px-6 md:px-24 md:flex-row justify-between items-start md:items-end"> */}
+      <div className="bg-white text-black flex flex-col px-6 md:px-24 md:flex-row justify-between items-start">
         <h2 className="text-3xl font-montserrat md:text-4xl leading-10 max-w-md mb-4 md:mb-0">
           Where Fragrance Meets Consciousness
         </h2>
-        <p className="text-xs max-w-md text-gray-500 md:text-right font-medium">
+        <p className="text-sm mt-1 text-gray-500 text-left md:text-left font-medium font-poppins ">
           Welcome to the Maison Aditi Journal a realm where fragrance becomes
           <br className="hidden md:block" /> a prayer, stories flow like
           incense, and every word carries The Essence
@@ -160,7 +161,7 @@ const Blog = () => {
                   Fragrance As A Ritual: When Scent Becomes Sacred
                 </h3>
 
-                <p className="text-xs md:text-sm text-gray-600 font-poppins font-medium mb-4 md:mb-6 leading-relaxed">
+                <p className="text-xs md:text-sm text-gray-600 font-poppins font-light mb-4 md:mb-6 leading-relaxed">
                   Fragrance has always been more than a sensory pleasure. Across{" "}
                   <br className="hidden md:block" /> cultures and centuries,
                   scent has been used as ritual a bridge{" "}

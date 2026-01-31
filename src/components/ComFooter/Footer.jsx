@@ -49,28 +49,28 @@ const Footer = () => {
             <p className="py-3 text-lg md:text-xl font-poppins">Info Links</p>
           </div>
           <div className="flex flex-col gap-2 md:gap-3">
-            <p className="text-[#D9D9D969] text-sm font-poppins md:text-balance cursor-pointer hover:text-white/80 transition">
+            <p className="text-[#D9D9D969] text-[15px] font-poppins md:text-balance cursor-pointer hover:text-white/80 transition">
               Home
             </p>
-            <p className="text-[#D9D9D969] text-sm font-poppins md:text-balance cursor-pointer hover:text-white/80 transition">
+            <p className="text-[#D9D9D969] text-[15px] font-poppins md:text-balance cursor-pointer hover:text-white/80 transition">
               About us
             </p>
-            <p className="text-[#D9D9D969] text-sm font-poppins md:text-balance cursor-pointer hover:text-white/80 transition">
+            <p className="text-[#D9D9D969] text-[15px] font-poppins md:text-balance cursor-pointer hover:text-white/80 transition">
               Blogs
             </p>
-            <p className="text-[#D9D9D969] text-sm font-poppins md:text-balance cursor-pointer hover:text-white/80 transition">
+            <p className="text-[#D9D9D969] text-[15px] font-poppins md:text-balance cursor-pointer hover:text-white/80 transition">
               Contact Us
             </p>
-            <p className="text-[#D9D9D969] text-sm font-poppins md:text-balance cursor-pointer hover:text-white/80 transition">
+            <p className="text-[#D9D9D969] text-[15px] font-poppins md:text-balance cursor-pointer hover:text-white/80 transition">
               Psychometric Test
             </p>
-            <p className="text-[#D9D9D969] text-sm font-poppins md:text-balance cursor-pointer hover:text-white/80 transition">
+            <p className="text-[#D9D9D969] text-[15px] font-poppins md:text-balance cursor-pointer hover:text-white/80 transition">
               Explore Gardens
             </p>
-            <p className="text-[#D9D9D969] text-sm font-poppins md:text-balance cursor-pointer hover:text-white/80 transition">
+            <p className="text-[#D9D9D969] text-[15px] font-poppins md:text-balance cursor-pointer hover:text-white/80 transition">
               My Cart
             </p>
-            <p className="text-[#D9D9D969] text-sm font-poppins md:text-balance cursor-pointer hover:text-white/80 transition">
+            <p className="text-[#D9D9D969] text-[15px] font-poppins md:text-balance cursor-pointer hover:text-white/80 transition">
               Products
             </p>
           </div>
@@ -82,7 +82,7 @@ const Footer = () => {
             <p className="transition font-rafgins text-balance md:text-xl">
               Location
             </p>
-            <p className="text-sm font-poppins md:text-balance text-[#D9D9D969]/40">
+            <p className="text-sm  font-poppins md:text-[15px] text-[#D9D9D969]/40">
               Nation pride, <br /> Golden City Streets, france 345678
             </p>
           </div>
@@ -90,7 +90,7 @@ const Footer = () => {
             <p className="transition font-rafgins text-balance md:text-lg">
               Contact
             </p>
-            <p className="text-sm font-poppins md:text-balance text-[#D9D9D969]/40">
+            <p className="text-sm  font-poppins md:text-[15px] text-[#D9D9D969]/40">
               +91 999 999 9999
             </p>
           </div>
@@ -98,7 +98,7 @@ const Footer = () => {
             <p className="transition font-rafgins text-balance md:text-lg">
               Email ID
             </p>
-            <p className="text-sm font-poppins md:text-balance text-[#D9D9D969]/40">
+            <p className="text-sm  font-poppins md:text-[15px] text-[#D9D9D969]/40">
               maisonaditi@gmail.com
             </p>
           </div>
@@ -139,7 +139,7 @@ const Footer = () => {
                 onChange={handleChange}
                 placeholder="Name"
                 required
-                className="w-full bg-transparent text-white text-sm font-poppins md:text-balance outline-none pb-2 placeholder-white/60 focus:placeholder-white/40 transition"
+                className="w-full bg-transparent text-white text-sm font-poppins md:text-[15px] outline-none pb-2 placeholder-white/ focus:placeholder-white/40 transition"
               />
               <div className="border-b border-white/40" />
             </div>
@@ -153,7 +153,7 @@ const Footer = () => {
                 onChange={handleChange}
                 placeholder="Email"
                 required
-                className="w-full bg-transparent text-white text-sm font-poppins md:text-balance outline-none pb-2 placeholder-white/60 focus:placeholder-white/40 transition"
+                className="w-full bg-transparent text-white text-sm font-poppins md:text-[15px] outline-none pb-2 placeholder-white/ focus:placeholder-white/40 transition"
               />
               <div className="border-b border-white/40" />
             </div>
@@ -167,7 +167,7 @@ const Footer = () => {
                 onChange={handleChange}
                 placeholder="Contact No"
                 required
-                className="w-full bg-transparent text-white text-sm font-poppins md:text-balance outline-none pb-2 placeholder-white/60 focus:placeholder-white/40 transition"
+                className="w-full bg-transparent text-white text-sm font-poppins md:text-[15px] outline-none pb-2 placeholder-white/ focus:placeholder-white/40 transition"
               />
               <div className="border-b border-white/40" />
             </div>
@@ -181,7 +181,7 @@ const Footer = () => {
                 onChange={handleChange}
                 placeholder="Message"
                 required
-                className="w-full bg-transparent text-white text-sm font-poppins md:text-balance outline-none resize-none pb-2 placeholder-white/60 focus:placeholder-white/40 transition"
+                className="w-full bg-transparent text-white text-sm font-poppins md:text-[15px] outline-none resize-none pb-2 placeholder-white/ focus:placeholder-white/40 transition"
               />
               <div className="border-b border-white/40" />
             </div>
@@ -192,7 +192,7 @@ const Footer = () => {
               disabled={isLoading}
               className="flex items-center justify-between w-full mt-4 disabled:opacity-50 disabled:cursor-not-allowed group"
             >
-              <p className="text-sm font-poppins md:text-balance font-montserrat tracking-wide border-b border-white pb-1 group-hover:border-white/70 transition">
+              <p className="text-sm md:text-balance font-montserrat tracking-wide border-b border-white pb-1 group-hover:border-white/70 transition">
                 {isLoading ? "Connecting..." : "Connect"}
               </p>
               {isLoading ? (
@@ -209,19 +209,13 @@ const Footer = () => {
 
       {/* Bottom Copyright Section */}
       <div className="border-t border-gray-700 mt-6 md:mt-8 pt-4 md:pt-5 flex flex-col md:flex-row justify-between items-center gap-3 md:gap-0 text-xs md:text-sm font-poppins font-rafgins text-gray-400">
-        <p className="text-center md:text-left">
+        <p className="text-center md:text-left text-white">
           ©2025 All Copyrights Reserved
         </p>
         <div className="flex flex-wrap items-center justify-center md:justify-end gap-3 md:gap-4 font-rafgins">
-          <p className="cursor-pointer hover:text-white transition">
-            Privacy Preferences
-          </p>
-          <p className="cursor-pointer hover:text-white transition">
-            Terms & Services
-          </p>
-          <p className="cursor-pointer hover:text-white transition">
-            Privacy Policy
-          </p>
+          <p className="cursor-pointer text-white">Privacy Preferences</p>
+          <p className="cursor-pointer">Terms & Services</p>
+          <p className="cursor-pointer">Privacy Policy</p>
         </div>
       </div>
     </footer>

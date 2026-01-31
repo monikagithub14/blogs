@@ -14,7 +14,7 @@ const IntroductionSection = () => {
   const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
 
   return (
-    <div ref={containerRef} className="relative h-[200vh]">
+    <div ref={containerRef} className="relative h-[300vh]">
       <div className="sticky top-0 h-screen flex flex-col items-center justify-center gap-12 overflow-hidden">
         <motion.p
           style={{ opacity }}
@@ -31,47 +31,53 @@ const IntroductionSection = () => {
           />
 
           {/* Scrollable Text Window */}
-          <div className="h-[350px] overflow-hidden relative w-1/2">
+          <div className="h-[350px] overflow-hidden relative w-1/2 px-12">
             <motion.div
               style={{ y }}
-              className="flex flex-col gap-14 text-center"
+              className="flex flex-col gap-10 text-center"
             >
-              <p className="font-poppins font-light text-sm">
+              <p className="font-poppins font-light italic text-sm">
                 Scent is the most silent form of communication yet it speaks
                 louder than words. Long before language was written, fragrance
                 was felt. It moved through rituals, memory, and emotion, shaping
-                how humans connected with the unseen.
+                how humans connected with the unseen.{" "}
               </p>
-              <p className="font-poppins font-light text-sm">
+              <p className="font-poppins font-light italic text-sm">
                 Every ingredient carries an energy a vibration shaped by earth,
                 sun, time, and intention. When blended with care, these energies
                 align to create something beyond aroma: a feeling.{" "}
               </p>
-              <p className="font-poppins font-light text-sm">
+              <p className="font-poppins font-light italic text-sm">
                 Every ingredient carries an energy a vibration shaped by earth,
                 sun, time, and intention. When blended with care, these energies
                 align to create something beyond aroma: a feeling.{" "}
               </p>
-              <p className="font-poppins font-light text-sm">
+              <p className="font-poppins font-light italic text-sm">
                 When fragrance is chosen consciously, it becomes an extension of
                 the inner self. It marks beginnings, honors transitions, and
                 lingers as a reminder of intention throughout the day.{" "}
+              </p>{" "}
+              <p className="font-poppins font-light italic text-sm">
+                Scent is the most silent form of communication yet it speaks
+                louder than words. Long before language was written, fragrance
+                was felt. It moved through rituals, memory, and emotion, shaping
+                how humans connected with the unseen.{" "}
               </p>
-              <p className="font-poppins font-light text-sm">
+              <p className="font-poppins font-light italic text-sm">
+                Every ingredient carries an energy a vibration shaped by earth,
+                sun, time, and intention. When blended with care, these energies
+                align to create something beyond aroma: a feeling.{" "}
+              </p>
+              <p className="font-poppins font-light italic text-sm">
+                Every ingredient carries an energy a vibration shaped by earth,
+                sun, time, and intention. When blended with care, these energies
+                align to create something beyond aroma: a feeling.{" "}
+              </p>
+              <p className="font-poppins font-light italic text-sm">
                 When fragrance is chosen consciously, it becomes an extension of
                 the inner self. It marks beginnings, honors transitions, and
                 lingers as a reminder of intention throughout the day.{" "}
-              </p>
-              <p className="font-poppins font-light text-sm">
-                When fragrance is chosen consciously, it becomes an extension of
-                the inner self. It marks beginnings, honors transitions, and
-                lingers as a reminder of intention throughout the day.{" "}
-              </p>
-              <p className="font-poppins font-light text-sm">
-                When fragrance is chosen consciously, it becomes an extension of
-                the inner self. It marks beginnings, honors transitions, and
-                lingers as a reminder of intention throughout the day.{" "}
-              </p>
+              </p>{" "}
             </motion.div>
 
             {/* Gradient Mask for smooth fade at bottom */}
@@ -93,7 +99,7 @@ const IntroductionSection = () => {
 const BlogDetail = () => {
   return (
     <>
-      <div className="flex flex-col items-center justify-center pt-8 gap-6">
+      <div className="flex flex-col items-center justify-center md:pt-20 gap-6">
         <p className="font-montserrat font-medium text-3xl text-center leading-10">
           The Language of Scent <br />
           How Fragrance Speaks to the Soul
@@ -120,7 +126,7 @@ const BlogDetail = () => {
         </div>
       </div>
       <IntroductionSection />
-      <div className="flex flex-row px-24 pb-20 gap-10">
+      <div className="flex flex-row px-24 pb-32 gap-10">
         <img className="w-full object-contain" src="/Group1.1.png" alt="" />
         <img className="w-full object-contain" src="/Group1.2.png" alt="" />
         <img className="w-full object-contain" src="/Group1.3.png" alt="" />

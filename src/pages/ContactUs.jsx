@@ -45,30 +45,51 @@ const ContactUs = () => {
         {/* Right Form Card */}
         <div className="w-full md:w-1/2 flex justify-end pr-4">
           <div className="bg-white w-full max-w-md p-8 shadow-xl">
-            <h2 className="text-sm font-semibold tracking-wide font-poppins">
+            <h2 className="text-[15px] font-semibold tracking-wide font-poppins">
               EVERY CONNECTION BEGINS WITH INTENTION.
             </h2>
-            <p className="text-xs text-gray-500 mb-6 font-poppins">
-              Reach Out To Us
+            <p className="text-xs text-gray-500 my-2 md:my-4 font-poppins">
+              Monday to Friday 10:00 AM To 12:00 AM IST
             </p>
 
-            <form className="space-y-4">
+            <div className="flex flex-row justify-between w-2/3 pb-6">
+              <div className="flex flex-col gap-0.5">
+                <p className="font-poppins text-xs cursor-pointer font-normal text-black">
+                  Instagram
+                </p>
+                <div className="w-full bg-black h-[2px]" />
+              </div>
+              <div className="flex flex-col gap-0.5">
+                <p className="font-poppins text-xs cursor-pointer font-normal text-black">
+                  Whatsapp
+                </p>
+                <div className="w-full bg-black h-[2px]" />
+              </div>
+              <div className="flex flex-col gap-0.5">
+                <p className="font-poppins text-xs cursor-pointer font-normal text-black">
+                  Tiktok
+                </p>
+                <div className="w-full bg-black h-[2px]" />
+              </div>
+            </div>
+
+            <form className="md:space-y-[10px] space-y-[6px]">
               <input
                 type="text"
                 placeholder="Name*"
-                className="w-full border bg-black/5 px-3 py-2 text-sm focus:outline-none"
+                className="w-full border bg-[#D9D9D936]/20 italic px-3 py-2 text-sm focus:outline-none"
               />
 
               <div className="flex gap-3">
                 <input
                   type="email"
                   placeholder="Email Address*"
-                  className="w-1/2 border bg-black/5 px-3 py-2 text-sm focus:outline-none"
+                  className="w-1/2 border bg-[#D9D9D936]/20 italic px-3 py-2 text-sm focus:outline-none"
                 />
                 <input
                   type="text"
                   placeholder="Contact No*"
-                  className="w-1/2 border bg-black/5 px-3 py-2 text-sm focus:outline-none"
+                  className="w-1/2 border bg-[#D9D9D936]/20 italic px-3 py-2 text-sm focus:outline-none"
                 />
               </div>
 
@@ -76,12 +97,12 @@ const ContactUs = () => {
                 <input
                   type="text"
                   placeholder="Country*"
-                  className="w-1/2 border bg-black/5 px-3 py-2 text-sm focus:outline-none"
+                  className="w-1/2 border bg-[#D9D9D936]/20 italic px-3 py-2 text-sm focus:outline-none"
                 />
                 <input
                   type="text"
                   placeholder="Order No*"
-                  className="w-1/2 border bg-black/5 px-3 py-2 text-sm focus:outline-none"
+                  className="w-1/2 border bg-[#D9D9D936]/20 italic px-3 py-2 text-sm focus:outline-none"
                 />
               </div>
 
@@ -93,20 +114,17 @@ const ContactUs = () => {
               <textarea
                 placeholder="Message*"
                 rows="4"
-                className="w-full border px-3 py-2 text-sm focus:outline-none"
+                className="w-full border px-3 py-2 text-sm focus:outline-none italic"
               ></textarea>
-              <div className=" w-full flex items-center justify-center flex-col relative">
+              <div className=" w-full flex items-center justify-center flex-col">
                 {" "}
                 <button
                   type="submit"
-                  className="text-sm flex flex-row justify-center items-center gap-3 "
+                  className="text-base font-poppins flex flex-row justify-center relative items-center gap-3"
                 >
                   Connect With Us <MdKeyboardArrowRight />
+                  <div className="w-4 h-0.5 left-0 top-6 bg-black absolute" />
                 </button>
-                <div className=" absolute left-1/3 w-1/6 h-0.5 bg-black" />
-                <p className="text-[10px] text-gray-400 mt-3">
-                  INSTAGRAM | WHATSAPP | TIKTOK
-                </p>
               </div>
             </form>
           </div>
