@@ -46,7 +46,7 @@ const Footer = () => {
         {/* Left Section */}
         <div className="flex flex-col w-full lg:w-[30%] text-left">
           <div>
-            <p className="py-3 text-lg md:text-xl font-poppins">Info Links</p>
+            <p className="py-3 text-lg md:text-lg font-poppins">Info Links</p>
           </div>
           <div className="flex flex-col gap-2 md:gap-3">
             <p className="text-[#D9D9D969] text-[15px] font-poppins md:text-balance cursor-pointer hover:text-white/80 transition">
@@ -79,7 +79,7 @@ const Footer = () => {
         {/* Middle Section */}
         <div className="flex flex-col w-full lg:w-[30%] space-y-4 mt-3 md:space-y-5">
           <div className="flex flex-col gap-1">
-            <p className="transition font-rafgins text-balance pb-2 md:text-xl">
+            <p className="transition font-rafgins text-balance pb-2 md:text-lg">
               Location
             </p>
             <p className="text-sm  font-poppins md:text-[15px] text-[#D9D9D969]/40">
@@ -128,7 +128,7 @@ const Footer = () => {
             className="w-full font-rafgins text-white space-y-5 md:space-y-6"
           >
             {/* Title */}
-            <p className="text-balance md:text-xl mb-4">Stay Connected</p>
+            <p className="text-balance md:text-lg mb-4">Stay Connected</p>
 
             {/* Name */}
             <div className="relative">
@@ -214,8 +214,8 @@ const Footer = () => {
         </p>
         <div className="flex flex-wrap items-center justify-center md:justify-end gap-3 md:gap-4 font-rafgins">
           <p className="cursor-pointer text-white">Privacy Preferences</p>
-          <p className="cursor-pointer">Terms & Services</p>
-          <p className="cursor-pointer">Privacy Policy</p>
+          <p className="cursor-pointer text-[#D9D9D969]">Terms & Services</p>
+          <p className="cursor-pointer text-[#D9D9D969]">Privacy Policy</p>
         </div>
       </div>
     </footer>

@@ -121,7 +121,7 @@ const BlogDetail = () => {
           </button>
           <div className="w-4 sm:w-5 bg-black h-0.5 sm:h-1 rounded-xl" />
         </div> */}
-        <div className="flex flex-col gap-2 sm:gap-2 items-center justify-center">
+        <div className="flex flex-col gap-2 sm:gap-2 items-center justify-center pb-20">
           <button
             className="flex items-center relative gap-0.5 mt-4 md:mt-3 sm:gap-1 text-black text-xs sm:text-sm md:text-md font-medium whitespace-nowrap"
             // onClick={() => navigate("/continue-experience")}

@@ -41,15 +41,21 @@ const Layout = () => {
 
   const shouldShowFooter = !hideLayoutFooter.includes(location.pathname);
 
+  const isContactPage = location.pathname === "/contact-us";
+
   return (
     <div className="flex flex-col min-h-screen">
       {/* Content Wrapper */}
       <div
-        className={`relative z-10 bg-white shadow-2xl transition-all duration-300 ease-out`}
-        style={{ marginBottom: shouldShowFooter ? `${footerHeight}px` : 0 }}
+        className={`relative z-10 ${
+          isContactPage ? "bg-black" : "bg-white"
+        } shadow-2xl transition-all duration-300 ease-out`}
+        style={{ marginBottom: shouldShowFooter ? `${footerHeight - 2}px` : 0 }}
       >
         {!hideLayout.includes(location.pathname) && <Navbar />}
-        <main className="min-h-screen bg-white">
+        <main
+          className={`min-h-screen ${isContactPage ? "bg-black" : "bg-white"}`}
+        >
           <Outlet />
         </main>
       </div>

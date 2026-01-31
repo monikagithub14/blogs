@@ -120,7 +120,7 @@ const ContactUs = () => {
                 rows="4"
                 className="w-full border px-3 py-2 text-[13px] focus:outline-none italic"
               ></textarea>
-              <div className=" w-full flex items-center justify-center flex-col">
+              <div className=" w-full flex items-center justify-center flex-col pb-2">
                 {" "}
                 <button
                   type="submit"
