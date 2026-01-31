@@ -35,8 +35,8 @@ const Blog = () => {
         {/* Content */}
         <div className="relative z-10 w-full">
           {/* Hero */}
-          <header className="flex flex-col items-center gap-5 text-center mt-32 md:mt-60 px-4">
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-montserrat font-semibold    leading-tight text-white">
+          <header className="flex flex-col items-center gap-5 text-center mt-24 md:mt-60 px-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-montserrat font-semibold    leading-tight text-white">
               Words Infused With Fragrance,
               <br className="hidden md:block" />
               <span className="text-white bg-clip-text block md:inline md:mt-0">

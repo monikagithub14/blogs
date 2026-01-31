@@ -22,16 +22,16 @@ const IntroductionSection = () => {
         >
           Introduction
         </motion.p>
-        <div className="flex flex-row w-full justify-between items-center">
+        <div className="flex flex-col md:flex-row w-full justify-between items-center">
           <motion.img
             style={{ opacity }}
             src="/LeftImage.png"
             alt=""
-            className="w-1/4 object-contain"
+            className="hidden md:block w-1/4 object-contain"
           />
 
           {/* Scrollable Text Window */}
-          <div className="h-[350px] overflow-hidden relative w-1/2 px-12">
+          <div className="h-[350px] overflow-hidden relative w-full md:w-1/2 px-6 md:px-12">
             <motion.div
               style={{ y }}
               className="flex flex-col gap-10 text-center"
@@ -88,7 +88,7 @@ const IntroductionSection = () => {
             style={{ opacity }}
             src="/RightImage.png"
             alt=""
-            className="w-1/4 object-contain"
+            className="hidden md:block w-1/4 object-contain"
           />
         </div>
       </div>
@@ -99,7 +99,7 @@ const IntroductionSection = () => {
 const BlogDetail = () => {
   return (
     <>
-      <div className="flex flex-col items-center justify-center md:pt-20 gap-6">
+      <div className="flex flex-col items-center justify-center pt-20 px-6 gap-6">
         <p className="font-montserrat font-medium text-3xl text-center leading-10">
           The Language of Scent <br />
           How Fragrance Speaks to the Soul
@@ -126,7 +126,7 @@ const BlogDetail = () => {
         </div>
       </div>
       <IntroductionSection />
-      <div className="flex flex-row px-24 pb-32 gap-10">
+      <div className="flex flex-col md:flex-row px-6 md:px-24 pb-32 gap-10">
         <img className="w-full object-contain" src="/Group1.1.png" alt="" />
         <img className="w-full object-contain" src="/Group1.2.png" alt="" />
         <img className="w-full object-contain" src="/Group1.3.png" alt="" />

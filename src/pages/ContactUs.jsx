@@ -25,14 +25,14 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 const ContactUs = () => {
   return (
     <div
-      className="w-full h-screen overflow-hidden bg-cover bg-center relative"
+      className="w-full min-h-screen md:h-screen overflow-y-auto md:overflow-hidden bg-cover bg-center relative"
       style={{ backgroundImage: `url(${background})` }}
     >
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/30"></div>
 
       {/* Content */}
-      <div className="relative z-10 flex h-full w-full justify-center items-center px-6 md:px-20">
+      <div className="relative z-10 flex flex-col md:flex-row h-full w-full justify-center md:items-center px-6 md:px-20 py-20 md:py-0">
         {/* Left Text Section */}
         <div className="hidden md:flex w-1/2 text-white text-center justify-center">
           <h1 className="text-4xl font-light leading-snug">
@@ -43,8 +43,8 @@ const ContactUs = () => {
         </div>
 
         {/* Right Form Card */}
-        <div className="w-full md:w-1/2 flex justify-end pr-4">
-          <div className="bg-white w-full max-w-md p-8 shadow-xl">
+        <div className="w-full md:w-1/2 flex justify-center md:justify-end md:pr-4">
+          <div className="bg-white w-full max-w-md p-6 md:p-8 shadow-xl">
             <h2 className="text-[15px] font-semibold tracking-wide font-poppins">
               EVERY CONNECTION BEGINS WITH INTENTION.
             </h2>
@@ -80,29 +80,29 @@ const ContactUs = () => {
                 className="w-full border bg-[#D9D9D936]/20 italic px-3 py-2 text-sm focus:outline-none"
               />
 
-              <div className="flex gap-3">
+              <div className="flex flex-col md:flex-row gap-3">
                 <input
                   type="email"
                   placeholder="Email Address*"
-                  className="w-1/2 border bg-[#D9D9D936]/20 italic px-3 py-2 text-sm focus:outline-none"
+                  className="w-full md:w-1/2 border bg-[#D9D9D936]/20 italic px-3 py-2 text-sm focus:outline-none"
                 />
                 <input
                   type="text"
                   placeholder="Contact No*"
-                  className="w-1/2 border bg-[#D9D9D936]/20 italic px-3 py-2 text-sm focus:outline-none"
+                  className="w-full md:w-1/2 border bg-[#D9D9D936]/20 italic px-3 py-2 text-sm focus:outline-none"
                 />
               </div>
 
-              <div className="flex gap-3">
+              <div className="flex flex-col md:flex-row gap-3">
                 <input
                   type="text"
                   placeholder="Country*"
-                  className="w-1/2 border bg-[#D9D9D936]/20 italic px-3 py-2 text-sm focus:outline-none"
+                  className="w-full md:w-1/2 border bg-[#D9D9D936]/20 italic px-3 py-2 text-sm focus:outline-none"
                 />
                 <input
                   type="text"
                   placeholder="Order No*"
-                  className="w-1/2 border bg-[#D9D9D936]/20 italic px-3 py-2 text-sm focus:outline-none"
+                  className="w-full md:w-1/2 border bg-[#D9D9D936]/20 italic px-3 py-2 text-sm focus:outline-none"
                 />
               </div>
 

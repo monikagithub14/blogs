@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <>
       {/* NAVBAR */}
-      <nav className="sticky top-0 z-50 w-full bg-white px-4 sm:px-6 md:px-12 lg:px-24 py-4 sm:py-6 md:py-8 flex items-center justify-between border-b border-gray-200">
+      <nav className="sticky top-0 z-50 w-full bg-white px-6 sm:px-6 md:px-12 lg:px-24 py-4 sm:py-6 md:py-8 flex items-center justify-between border-b border-gray-200">
         {/* Left */}
         <div className="flex items-center gap-3 sm:gap-4 md:gap-6">
           <TbMenuDeep

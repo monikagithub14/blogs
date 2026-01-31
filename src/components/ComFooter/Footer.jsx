@@ -41,7 +41,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-black text-white px-4 sm:px-8 md:px-12 lg:px-24 py-6 font-poppins md:py-8 overflow-hidden">
+    <footer className="bg-black text-white px-6 sm:px-8 md:px-12 lg:px-24 py-6 font-poppins md:py-8 overflow-hidden">
       <div className="flex flex-col lg:flex-row justify-between gap-8 lg:gap-12 ">
         {/* Left Section */}
         <div className="flex flex-col w-full lg:w-[30%] text-left">
