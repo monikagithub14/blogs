@@ -377,55 +377,98 @@ import { ArrowBigRight, ArrowRight } from "lucide-react";
 import { FaAngleRight } from "react-icons/fa6";
 const AboutUs = () => {
   return (
-    <div className="">
-      <div className="mx-4 sm:mx-6 md:mx-8 lg:mx-10 py-8 md:py-12 lg:py-16">
-        <div className="h-[75vh] flex flex-col items-center justify-center">
-          {" "}
-          <p className="uppercase tracking-[0.1em] text-2xl sm:text-4xl lg:text-6xl font-medium text-center mb-8 sm:mb-10 lg:mb-12 leading-snug">
+    // Main Container with Scroll Snap
+    <div className="h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth no-scrollbar scrollbar-hide">
+      {/* SECTION 1: Header Text */}
+      {/* SECTION 1: Header Text */}
+      <section className="h-screen snap-center relative flex flex-col items-center justify-center mx-4 sm:mx-6 md:mx-8 lg:mx-10 py-8 md:py-12 lg:py-16">
+        <div className="flex flex-col items-center justify-center z-10">
+          <motion.p
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.8 }}
+            className="uppercase tracking-[0.1em] text-2xl sm:text-4xl lg:text-6xl font-medium text-center leading-snug"
+          >
             Every Flower Holds A<br className="hidden sm:block" />
             Whisper Of Light
-          </p>
+          </motion.p>
         </div>
-        <div className="-mt-44">
+
+        {/* Pendulum positioned absolutely to not affect text centering */}
+        <div className="absolute top-[60%] sm:top-[65%] z-0">
           <HalfSpinImage />
         </div>
-        <div className="h-screen flex flex-col items-center justify-center text-center px-4 sm:px-6 md:px-8">
-          <p className="uppercase tracking-wide text-2xl sm:text-4xl lg:text-6xl font-montserrat  font-semibold text-center mb-8 sm:mb-10 lg:mb-12 leading-snug">
-            Maison Aditi A Living Origin
-          </p>
+      </section>
 
-          <div className="space-y-4 sm:space-y-8 tracking-wide italic max-w-4xl">
-            <p className="text-sm sm:text-base tracking-wider leading-5 sm:leading-7 text-black/80">
-              Maison Aditi Opens A New Way Of Experiencing Perfume <br /> As A
-              Living Expression Of Consciousness In Form.
-            </p>
+      {/* SECTION 2: Maison Aditi Description */}
+      <section className="h-screen snap-center flex flex-col items-center justify-center text-center px-4 sm:px-6 md:px-8 bg-white">
+        <motion.p
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: false, amount: 0.5 }}
+          className="uppercase tracking-wide text-2xl sm:text-4xl lg:text-6xl font-montserrat  font-semibold text-center mb-8 sm:mb-10 lg:mb-12 leading-snug"
+        >
+          Maison Aditi A Living Origin
+        </motion.p>
 
-            <p className="text-sm sm:text-base tracking-wider leading-5 sm:leading-7 text-black/80">
-              Each Fragrance Is A Prayer In Scent, An Offering, A Message, A
-              Vibration <br /> To Remind Us Of Who We Truly Are And What We Are
-              Called To Become.
-            </p>
-          </div>
+        <div className="space-y-4 sm:space-y-8 tracking-wide italic max-w-4xl">
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: false, amount: 0.8 }}
+            className="text-sm sm:text-base tracking-wider leading-5 sm:leading-7 text-black/80"
+          >
+            Maison Aditi Opens A New Way Of Experiencing Perfume <br /> As A
+            Living Expression Of Consciousness In Form.
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+            viewport={{ once: false, amount: 0.8 }}
+            className="text-sm sm:text-base tracking-wider leading-5 sm:leading-7 text-black/80"
+          >
+            Each Fragrance Is A Prayer In Scent, An Offering, A Message, A
+            Vibration <br /> To Remind Us Of Who We Truly Are And What We Are
+            Called To Become.
+          </motion.p>
         </div>
-      </div>
+      </section>
 
-      {/* <HalfSpinImage /> */}
-      <div className="h-screen w-full">
+      {/* SECTION 3: Full Width Image */}
+      <section className="h-screen snap-center w-full">
         <img
           src="Rectangleimg3.png"
           alt=""
           className="w-full h-full object-cover"
         />
-      </div>
+      </section>
 
-      <div className="h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 -translate-y-6">
+      {/* SECTION 4: Philosophy & Source */}
+      <section className="h-screen snap-center flex items-center justify-center px-4 sm:px-6 md:px-8 bg-white">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="uppercase tracking-[0.1em] font-semibold text-2xl sm:text-4xl lg:text-6xl text-center mb-8 sm:mb-10 lg:mb-12 leading-snug">
+          <motion.p
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.8 }}
+            className="uppercase tracking-[0.1em] font-semibold text-2xl sm:text-4xl lg:text-6xl text-center mb-8 sm:mb-10 lg:mb-12 leading-snug"
+          >
             Philosophy & Source
-          </p>
+          </motion.p>
 
           <div className="space-y-4 sm:space-y-10 italic">
-            <p className="text-sm sm:text-base tracking-wider leading-5 sm:leading-7 text-black/80">
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+              viewport={{ once: false, amount: 0.8 }}
+              className="text-sm sm:text-base tracking-wider leading-5 sm:leading-7 text-black/80"
+            >
               Maison Aditi Arises From A Vision Where Consciousness Awakens
               Within Life Itself, And Where Every Movement, Form, And Breath
               Becomes A Field Of Transformation. Flowers Are Known As Living
@@ -435,155 +478,231 @@ const AboutUs = () => {
               Passage Rather Than An Object, Inviting Alignment, Presence,
               <br /> And The Gentle Embodiment Of A Higher Truth In Everyday
               Life.
-            </p>
+            </motion.p>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div>
-        <section
-          className="
-      relative
-      h-screen
-      w-full
-      bg-center
-      bg-cover
-      flex
-      items-center
-      justify-center
-    "
-          style={{
-            backgroundImage: "url('/Rectangleimg2.png')",
-          }}
-        >
-          {/* Overlay */}
-          <div className="absolute inset-0 bg-white/20 backdrop-blur-sm" />
+      {/* SECTION 5: Image with Overlay Text */}
+      <section
+        className="
+          snap-center
+          relative
+          h-screen
+          w-full
+          bg-center
+          bg-cover
+          flex
+          items-center
+          justify-center
+        "
+        style={{
+          backgroundImage: "url('/Rectangleimg2.png')",
+        }}
+      >
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-white/20 backdrop-blur-sm" />
 
-          {/* Content */}
-          <div className="relative z-10 text-center px-4 sm:px-6">
-            <h2 className="uppercase tracking-[0.1em] text-base sm:text-2xl md:text-5xl font-semibold font-montserrat text-black">
-              From this vision, <br /> emerges a fragrant form of
-              consciousness{" "}
-            </h2>
-          </div>
-        </section>
-      </div>
+        {/* Content */}
+        <div className="relative z-10 text-center px-4 sm:px-6">
+          <motion.h2
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.8 }}
+            className="uppercase tracking-[0.1em] text-base sm:text-2xl md:text-5xl font-semibold font-montserrat text-black"
+          >
+            From this vision, <br /> emerges a fragrant form of
+            consciousness{" "}
+          </motion.h2>
+        </div>
+      </section>
 
-      <div className="h-screen flex items-center justify-center px-4 sm:px-6 md:px-8">
-        <section className="bg-white text-black flex justify-center w-full">
+      {/* SECTION 6: The Divine Essence Collection */}
+      <section className="h-screen snap-center flex items-center justify-center px-4 sm:px-6 md:px-8 bg-white">
+        <div className="bg-white text-black flex justify-center w-full">
           <div className="max-w-full text-center">
-            <p className="uppercase tracking-[0.1em] font-semibold text-2xl sm:text-4xl lg:text-6xl text-center mb-8 sm:mb-10 lg:mb-12 leading-snug">
+            <motion.p
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: false, amount: 0.8 }}
+              className="uppercase tracking-[0.1em] font-semibold text-2xl sm:text-4xl lg:text-6xl text-center mb-8 sm:mb-10 lg:mb-12 leading-snug"
+            >
               The Divine Essence Collection
-            </p>
+            </motion.p>
 
             <div className="space-y-4 sm:space-y-8  italic px-10 md:px-24 text-center">
-              {/*  <p className="text-xs sm:text-base text-black sm:leading-8"> */}
-              {/* <div className="space-y-4 sm:space-y-10 italic "> */}
-              <p className="text-sm sm:text-base tracking-wider leading-5 sm:leading-7 text-black/80">
+              <motion.p
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
+                viewport={{ once: false, amount: 0.8 }}
+                className="text-sm sm:text-base tracking-wider leading-5 sm:leading-7 text-black/80"
+              >
                 Divine Essence Is The Inaugural Expression Of Maison Aditi, A
                 Living Map Of <br /> Consciousness, Inspired By The Mother's
                 Symbol.
-              </p>
+              </motion.p>
 
-              <p className="text-sm sm:text-base tracking-wider leading-5 sm:leading-7 text-black/80">
+              <motion.p
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+                viewport={{ once: false, amount: 0.8 }}
+                className="text-sm sm:text-base tracking-wider leading-5 sm:leading-7 text-black/80"
+              >
                 At Its Center Resides The Still Point — The Silent Presence From
                 Which All Expression Arises. From This Center
                 <br /> Radiate The Soul Forces That Power Through Which
                 Consciousness Manifests And Acts In Life.
-              </p>
+              </motion.p>
 
-              <p className="text-sm sm:text-base tracking-wider leading-5 sm:leading-7 text-black/80">
+              <motion.p
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+                viewport={{ once: false, amount: 0.8 }}
+                className="text-sm sm:text-base tracking-wider leading-5 sm:leading-7 text-black/80"
+              >
                 Each Fragrance Embodies One Of These Forces, Inviting A Lived
                 Experience Of Alignment: Wisdom, Strength, <br /> Harmony,
                 Perfection, And Divine Truth. Together, They Form A Circular
                 Journey, <br /> Not To Be Followed In Sequence, But Entered
                 Intuitively.
-              </p>
+              </motion.p>
 
-              <p className="text-sm sm:text-base tracking-wider leading-5 sm:leading-7 text-black/80">
+              <motion.p
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+                viewport={{ once: false, amount: 0.8 }}
+                className="text-sm sm:text-base tracking-wider leading-5 sm:leading-7 text-black/80"
+              >
                 These Are Not Merely Perfumes To Be Chosen. They Are Fragrances{" "}
                 <br />
                 That Choose You On Your Path To Awakening.
-              </p>
+              </motion.p>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
 
-      <div>
-        <section
-          className="
-      relative
-      h-screen
-      w-full
-      flex
-      items-center
-      justify-center
-      bg-center
-      bg-cover
-    "
-          style={{
-            backgroundImage: "url('/Rectangleimg3.png')",
-          }}
-        >
-          {/* Overlay */}
-          <div className="absolute inset-0 bg-white/5 backdrop-blur-sm" />
+      {/* SECTION 7: Image with Overlay Text 2 */}
+      <section
+        className="
+          snap-center
+          relative
+          h-screen
+          w-full
+          flex
+          items-center
+          justify-center
+          bg-center
+          bg-cover
+        "
+        style={{
+          backgroundImage: "url('/Rectangleimg3.png')",
+        }}
+      >
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-white/5 backdrop-blur-sm" />
 
-          {/* Content */}
-          <div className="relative z-10 text-center px-4 sm:px-6">
-            <h2 className="uppercase tracking-[0.1em] text-base sm:text-2xl md:text-5xl font-semibold font-montserrat text-black">
-              This Vision Asked To
-              <br />
-              Be Lived
-            </h2>
-          </div>
-        </section>
-      </div>
+        {/* Content */}
+        <div className="relative z-10 text-center px-4 sm:px-6">
+          <motion.h2
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.8 }}
+            className="uppercase tracking-[0.1em] text-base sm:text-2xl md:text-5xl font-semibold font-montserrat text-black"
+          >
+            This Vision Asked To
+            <br />
+            Be Lived
+          </motion.h2>
+        </div>
+      </section>
 
-      <div className="h-screen flex items-center justify-center px-4 sm:px-6 md:px-8">
-        <section className="bg-white text-black flex justify-center w-full">
+      {/* SECTION 8: Founder's Offering */}
+      <section className="h-screen snap-center relative z-10 flex items-center justify-center px-4 sm:px-6 md:px-8 bg-white">
+        <div className="bg-white text-black flex justify-center w-full">
           <div className="max-w-4xl text-center">
-            <p className="uppercase tracking-[0.1em] font-semibold text-2xl sm:text-4xl lg:text-6xl text-center mb-8 sm:mb-10 lg:mb-12 leading-snug">
+            <motion.p
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: false, amount: 0.8 }}
+              className="uppercase tracking-[0.1em] font-semibold text-2xl sm:text-4xl lg:text-6xl text-center mb-8 sm:mb-10 lg:mb-12 leading-snug"
+            >
               Founder's Offering
-            </p>
+            </motion.p>
 
             <div className="space-y-4 sm:space-y-10 italic">
-              <p className="text-sm sm:text-base tracking-wider leading-5 sm:leading-7 text-black/80">
+              <motion.p
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+                viewport={{ once: false, amount: 0.8 }}
+                className="text-sm sm:text-base tracking-wider leading-5 sm:leading-7 text-black/80"
+              >
                 Maison Aditi Emerged Through A Personal Journey Of Shedding,
                 Remembering, And Becoming.
-              </p>
+              </motion.p>
 
-              <p className="text-sm sm:text-base tracking-wider leading-5 sm:leading-7 text-black/80">
+              <motion.p
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+                viewport={{ once: false, amount: 0.8 }}
+                className="text-sm sm:text-base tracking-wider leading-5 sm:leading-7 text-black/80"
+              >
                 A Lifelong Movement Of Releasing Inner Limitations, Of Finding
                 Voice, Purpose, And Authentic Expression — Until Encountering
                 The Teachings Of The Mother, Where Recognition Replaced Seeking,
                 And Alignment Became Unavoidable.
-              </p>
+              </motion.p>
 
-              <p className="text-sm sm:text-base tracking-wider leading-5 sm:leading-7 text-black/80">
-                What Followed Was A Response To The Calling.
-                {/* </p> */}
-                {/* <p className="text-xs sm:text-base text-gray-700 leading-relaxed"> */}
-                Maison Aditi Arose As An Offering, A Way To Give Form To An
-                Inner Awakening. To Translate Consciousness Into Beauty, And To
-                Allow Devotion To Take Shape In The World. A Gesture Of
-                Gratitude. A Bridge Between The Unseen And The Lived.
-              </p>
+              <motion.p
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+                viewport={{ once: false, amount: 0.8 }}
+                className="text-sm sm:text-base tracking-wider leading-5 sm:leading-7 text-black/80"
+              >
+                What Followed Was A Response To The Calling. Maison Aditi Arose
+                As An Offering, A Way To Give Form To An Inner Awakening. To
+                Translate Consciousness Into Beauty, And To Allow Devotion To
+                Take Shape In The World. A Gesture Of Gratitude. A Bridge
+                Between The Unseen And The Lived.
+              </motion.p>
 
-              <p className="text-sm sm:text-base tracking-wider leading-5 sm:leading-7 text-black/80">
+              <motion.p
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
+                viewport={{ once: false, amount: 0.8 }}
+                className="text-sm sm:text-base tracking-wider leading-5 sm:leading-7 text-black/80"
+              >
                 This Work Is Offered To The Divine, And To Life Itself, With The
                 Hope That It May Serve As A Quiet Companion On The Path Of
                 Remembrance.
-              </p>
+              </motion.p>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
 
-      <div className="md:h-screen flex items-center justify-center px-4">
-        <section className="bg-white flex justify-center items-center">
+      {/* SECTION 9: Circle Container */}
+      <section className="h-screen snap-center snap-always flex flex-col items-center sm:mt-20 md:mt-40 lg:mt-60 justify-center px-4 bg-white gap-4 sm:gap-8">
+        <div className="bg-white flex justify-center items-center">
           {/* Circle Container */}
+          {/* <motion.div */}
           <div
+            // initial={{ opacity: 0, scale: 0.9 }}
+            // whileInView={{ opacity: 1, scale: 1 }}
+            // transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.9 }}
             className="
         relative
         w-[88vw]
@@ -620,13 +739,13 @@ const AboutUs = () => {
 
               {/* Body */}
               <div className="space-y-1 sm:space-y-6 italic">
-                <p className="text-sm sm:text-base tracking-wider leading-5 sm:leading-7 text-black/80">
+                <p className="text-xs sm:text-sm md:text-base md:tracking-wider leading-2 sm:leading-7 text-black/80">
                   A movement of consciousness through beauty. An invitation to
                   live with presence, intention, and truth. In a world that
                   pulls outward, it offers a return inward.
                 </p>
 
-                <p className="text-sm sm:text-base tracking-wider leading-5 sm:leading-7 text-black/80">
+                <p className="text-xs sm:text-sm md:text-base md:tracking-wider leading-2 sm:leading-7 text-black/80">
                   In a time of acceleration, a space of stillness. In the midst
                   of form, a remembrance of essence. An invitation to rise, to
                   blossom into our highest form of beauty, and to embody
@@ -659,22 +778,30 @@ const AboutUs = () => {
               </div>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
 
-      <div className="mt-10 sm:mt-14 md:mt-20 lg:mt-20">
-        <HalfSpinImage />
-      </div>
+        {/* Pendulum moved here */}
+        <div>
+          <HalfSpinImage />
+        </div>
+      </section>
 
-      <div>
-        <section className="bg-white h-[50vh] flex justify-center items-center px-4 sm:px-6">
-          <h2 className="uppercase font-montserrat tracking-[0.1em] text-base sm:text-2xl md:text-4xl font-medium text-center leading-snug">
+      {/* SECTION 10: Final Text */}
+      <section className="h-screen snap-center flex flex-col items-center justify-center">
+        <div className="bg-white flex justify-center items-center px-4 sm:px-6">
+          <motion.h2
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.4 }}
+            className="uppercase font-montserrat tracking-[0.1em] text-base sm:text-2xl md:text-4xl font-medium text-center leading-snug"
+          >
             Every Breath Returns
             <br />
             To Light
-          </h2>
-        </section>
-      </div>
+          </motion.h2>
+        </div>
+      </section>
     </div>
   );
 };

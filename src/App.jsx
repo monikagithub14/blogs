@@ -14,6 +14,9 @@ import Login from "./pages/Login.jsx";
 import SignUp from "./pages/SignUp.jsx";
 import MyAccount from "./components/MyAccount.jsx";
 import AboutUs from "./components/About Us/AboutUs.jsx";
+import PowerofCombination from "./components/PowerOfCombination/PowerOfCombination.jsx";
+import ProductStructure from "./components/ProductStructure/ProductStructure.jsx";
+import Products from "./components/Products/Products.jsx";
 // import MyAccount from "./components/MyAccount.jsx";
 
 function AppContent() {
@@ -37,7 +40,10 @@ function AppContent() {
         <Route path="/blog/:blog" element={<BlogDetail />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/my-account" element={<MyAccount />} />
-        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/about-us" element={<AboutUs />} />{" "}
+        {/* <Route path="/product-structure" element={<ProductStructure />} />{" "} */}
+        <Route path="/power-of-combination" element={<PowerofCombination />} />
+        <Route path="/products" element={<Products />} />
       </Route>
     </Routes>
   );
