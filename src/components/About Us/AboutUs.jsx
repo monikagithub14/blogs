@@ -378,26 +378,29 @@ import { FaAngleRight } from "react-icons/fa6";
 const AboutUs = () => {
   return (
     <div className="">
-      <div className="mx-4 sm:mx-6 md:mx-8 lg:mx-10 py-8 md:py-12 lg:py-16 mt-28">
-        <p className="uppercase tracking-[0.1em] text-4xl sm:text-6xl font-light text-center mb-8 sm:mb-10 lg:mb-12 leading-snug">
-          Every Flower Holds A<br className="hidden sm:block" />
-          Whisper Of Light.
-        </p>
-
-        <HalfSpinImage />
-
+      <div className="mx-4 sm:mx-6 md:mx-8 lg:mx-10 py-8 md:py-12 lg:py-16">
+        <div className="h-[75vh] flex flex-col items-center justify-center">
+          {" "}
+          <p className="uppercase tracking-[0.1em] text-2xl sm:text-4xl lg:text-6xl font-medium text-center mb-8 sm:mb-10 lg:mb-12 leading-snug">
+            Every Flower Holds A<br className="hidden sm:block" />
+            Whisper Of Light
+          </p>
+        </div>
+        <div className="-mt-44">
+          <HalfSpinImage />
+        </div>
         <div className="h-screen flex flex-col items-center justify-center text-center px-4 sm:px-6 md:px-8">
-          <p className="uppercase tracking-wide text-4xl sm:text-6xl font-montserrat  font-medium text-center mb-8 sm:mb-10 lg:mb-12 leading-snug">
+          <p className="uppercase tracking-wide text-2xl sm:text-4xl lg:text-6xl font-montserrat  font-semibold text-center mb-8 sm:mb-10 lg:mb-12 leading-snug">
             Maison Aditi A Living Origin
           </p>
 
           <div className="space-y-4 sm:space-y-8 tracking-wide italic max-w-4xl">
-            <p className="text-xs sm:text-base text-black/80 leading-relaxed">
+            <p className="text-sm sm:text-base tracking-wider leading-5 sm:leading-7 text-black/80">
               Maison Aditi Opens A New Way Of Experiencing Perfume <br /> As A
               Living Expression Of Consciousness In Form.
             </p>
 
-            <p className="text-xs sm:text-base text-black/80 leading-relaxed">
+            <p className="text-sm sm:text-base tracking-wider leading-5 sm:leading-7 text-black/80">
               Each Fragrance Is A Prayer In Scent, An Offering, A Message, A
               Vibration <br /> To Remind Us Of Who We Truly Are And What We Are
               Called To Become.
@@ -417,7 +420,7 @@ const AboutUs = () => {
 
       <div className="h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 -translate-y-6">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="uppercase tracking-[0.1em] font-medium text-4xl sm:text-6xl text-center mb-8 sm:mb-10 lg:mb-12 leading-snug">
+          <p className="uppercase tracking-[0.1em] font-semibold text-2xl sm:text-4xl lg:text-6xl text-center mb-8 sm:mb-10 lg:mb-12 leading-snug">
             Philosophy & Source
           </p>
 
@@ -429,8 +432,9 @@ const AboutUs = () => {
               Bearers Of This Awakening, Each Offering Its Own Vibrational
               Peace, Strength, Love, Wisdom Spoken In Silence And Received By
               The Soul. From This Subtle Language, Fragrance Is Born As A
-              Passage Rather Than An Object, Inviting Alignment, Presence, And
-              The Gentle Embodiment Of A Higher Truth In Everyday Life.
+              Passage Rather Than An Object, Inviting Alignment, Presence,
+              <br /> And The Gentle Embodiment Of A Higher Truth In Everyday
+              Life.
             </p>
           </div>
         </div>
@@ -457,25 +461,9 @@ const AboutUs = () => {
 
           {/* Content */}
           <div className="relative z-10 text-center px-4 sm:px-6">
-            <h2
-              className="
-          uppercase
-          font-semibold
-          tracking-widest
-          text-sm
-          sm:text-base
-          md:text-lg
-          lg:text-5xl
-          text-black
-          w-full
-          sm:leading-4
-        "
-            >
-              From This Vision, Emerges A
-              <br />
-              Fragrant Form Of
-              <br />
-              Consciousness
+            <h2 className="uppercase tracking-[0.1em] text-base sm:text-2xl md:text-5xl font-semibold font-montserrat text-black">
+              From this vision, <br /> emerges a fragrant form of
+              consciousness{" "}
             </h2>
           </div>
         </section>
@@ -484,25 +472,27 @@ const AboutUs = () => {
       <div className="h-screen flex items-center justify-center px-4 sm:px-6 md:px-8">
         <section className="bg-white text-black flex justify-center w-full">
           <div className="max-w-full text-center">
-            <p className="uppercase tracking-[0.1em] font-medium text-4xl sm:text-6xl text-center mb-8 sm:mb-10 lg:mb-12 leading-snug">
+            <p className="uppercase tracking-[0.1em] font-semibold text-2xl sm:text-4xl lg:text-6xl text-center mb-8 sm:mb-10 lg:mb-12 leading-snug">
               The Divine Essence Collection
             </p>
 
             <div className="space-y-4 sm:space-y-8  italic px-10 md:px-24 text-center">
-              <p className="text-xs sm:text-base text-black/80 sm:leading-8">
+              {/*  <p className="text-xs sm:text-base text-black sm:leading-8"> */}
+              {/* <div className="space-y-4 sm:space-y-10 italic "> */}
+              <p className="text-sm sm:text-base tracking-wider leading-5 sm:leading-7 text-black/80">
                 Divine Essence Is The Inaugural Expression Of Maison Aditi, A
                 Living Map Of <br /> Consciousness, Inspired By The Mother's
                 Symbol.
               </p>
 
-              <p className="text-xs sm:text-base text-black/80 sm:leading-8">
+              <p className="text-sm sm:text-base tracking-wider leading-5 sm:leading-7 text-black/80">
                 At Its Center Resides The Still Point — The Silent Presence From
                 Which All Expression Arises. From This Center
                 <br /> Radiate The Soul Forces That Power Through Which
                 Consciousness Manifests And Acts In Life.
               </p>
 
-              <p className="text-xs sm:text-base text-black/80 sm:leading-8">
+              <p className="text-sm sm:text-base tracking-wider leading-5 sm:leading-7 text-black/80">
                 Each Fragrance Embodies One Of These Forces, Inviting A Lived
                 Experience Of Alignment: Wisdom, Strength, <br /> Harmony,
                 Perfection, And Divine Truth. Together, They Form A Circular
@@ -510,7 +500,7 @@ const AboutUs = () => {
                 Intuitively.
               </p>
 
-              <p className="text-xs sm:text-base text-black/80 sm:leading-8">
+              <p className="text-sm sm:text-base tracking-wider leading-5 sm:leading-7 text-black/80">
                 These Are Not Merely Perfumes To Be Chosen. They Are Fragrances{" "}
                 <br />
                 That Choose You On Your Path To Awakening.
@@ -553,35 +543,34 @@ const AboutUs = () => {
       <div className="h-screen flex items-center justify-center px-4 sm:px-6 md:px-8">
         <section className="bg-white text-black flex justify-center w-full">
           <div className="max-w-4xl text-center">
-            <p className="uppercase tracking-[0.1em] font-montserrat font-medium text-4xl sm:text-6xl text-center mb-8 sm:mb-10 lg:mb-12 leading-snug">
+            <p className="uppercase tracking-[0.1em] font-semibold text-2xl sm:text-4xl lg:text-6xl text-center mb-8 sm:mb-10 lg:mb-12 leading-snug">
               Founder's Offering
             </p>
 
             <div className="space-y-4 sm:space-y-10 italic">
-              <p className="text-xs sm:text-base text-gray-700 leading-relaxed">
+              <p className="text-sm sm:text-base tracking-wider leading-5 sm:leading-7 text-black/80">
                 Maison Aditi Emerged Through A Personal Journey Of Shedding,
                 Remembering, And Becoming.
               </p>
 
-              <p className="text-xs sm:text-base text-gray-700 leading-relaxed">
+              <p className="text-sm sm:text-base tracking-wider leading-5 sm:leading-7 text-black/80">
                 A Lifelong Movement Of Releasing Inner Limitations, Of Finding
                 Voice, Purpose, And Authentic Expression — Until Encountering
                 The Teachings Of The Mother, Where Recognition Replaced Seeking,
                 And Alignment Became Unavoidable.
               </p>
 
-              <p className="text-xs sm:text-base text-gray-700 leading-relaxed">
+              <p className="text-sm sm:text-base tracking-wider leading-5 sm:leading-7 text-black/80">
                 What Followed Was A Response To The Calling.
-              </p>
-
-              <p className="text-xs sm:text-base text-gray-700 leading-relaxed">
+                {/* </p> */}
+                {/* <p className="text-xs sm:text-base text-gray-700 leading-relaxed"> */}
                 Maison Aditi Arose As An Offering, A Way To Give Form To An
                 Inner Awakening. To Translate Consciousness Into Beauty, And To
                 Allow Devotion To Take Shape In The World. A Gesture Of
                 Gratitude. A Bridge Between The Unseen And The Lived.
               </p>
 
-              <p className="text-xs sm:text-base text-gray-700 leading-relaxed">
+              <p className="text-sm sm:text-base tracking-wider leading-5 sm:leading-7 text-black/80">
                 This Work Is Offered To The Divine, And To Life Itself, With The
                 Hope That It May Serve As A Quiet Companion On The Path Of
                 Remembrance.
@@ -618,7 +607,7 @@ const AboutUs = () => {
             {/* Content */}
             <div className="text-center px-4 sm:px-10 md:px-16 space-y-4 sm:space-y-4 lg md:space-y-6 lg:space-y-10">
               {/* Title */}
-              <h2 className="uppercase tracking-[0.08em] text-[10px] sm:text-base md:text-4xl font-bold mb-2 sm:mb-4">
+              <h2 className="uppercase tracking-[0.08em] text-[10px] sm:text-2xl md:text-4xl font-bold mb-2 sm:mb-4">
                 Maison Aditi Is More
                 <br />
                 Than A Maison
@@ -631,13 +620,13 @@ const AboutUs = () => {
 
               {/* Body */}
               <div className="space-y-1 sm:space-y-6 italic">
-                <p className="text-[9px] sm:text-base text-black/55 leading-snug sm:leading-relaxed">
+                <p className="text-sm sm:text-base tracking-wider leading-5 sm:leading-7 text-black/80">
                   A movement of consciousness through beauty. An invitation to
                   live with presence, intention, and truth. In a world that
                   pulls outward, it offers a return inward.
                 </p>
 
-                <p className="text-[9px] sm:text-base text-black/55 leading-snug sm:leading-relaxed">
+                <p className="text-sm sm:text-base tracking-wider leading-5 sm:leading-7 text-black/80">
                   In a time of acceleration, a space of stillness. In the midst
                   of form, a remembrance of essence. An invitation to rise, to
                   blossom into our highest form of beauty, and to embody
@@ -652,12 +641,21 @@ const AboutUs = () => {
               </p>
 
               {/* CTA */}
-              <div className="flex flex-col items-center">
-                <button className="text-[9px] sm:text-sm tracking-wide capitalize font-bold flex items-center gap-1 hover:opacity-70 transition">
-                  Enter the circle
-                  <FaAngleRight size={10} />
+              <div className="flex flex-col gap-2 sm:gap-2 items-center justify-center">
+                <button
+                  className="flex items-center relative gap-0.5 mt-4 md:mt-3 sm:gap-1 text-black text-xs sm:text-sm md:text-md font-medium whitespace-nowrap"
+                  // onClick={() => navigate("/continue-experience")}
+                >
+                  <span className="hidden sm:inline font-poppins font-semibold  text-lg">
+                    Enter the circle
+                  </span>
+                  <span className="sm:hidden">Continue</span>
+                  <FaAngleRight
+                    size={12}
+                    className="sm:w-3.5 sm:h-3.5 md:w-4 md:h-4"
+                  />
+                  <div className="absolute -bottom-1 w-4 sm:w-5 bg-black h-0.5 sm:h-1 rounded-xl" />
                 </button>
-                <div className="h-0.5 w-6 sm:h-1 sm:w-8 bg-black rounded-2xl mt-1"></div>
               </div>
             </div>
           </div>
@@ -670,7 +668,7 @@ const AboutUs = () => {
 
       <div>
         <section className="bg-white h-[50vh] flex justify-center items-center px-4 sm:px-6">
-          <h2 className="uppercase font-montserrat tracking-[0.1em] text-base sm:text-2xl md:text-4xl font-medium text-center leading-tight">
+          <h2 className="uppercase font-montserrat tracking-[0.1em] text-base sm:text-2xl md:text-4xl font-medium text-center leading-snug">
             Every Breath Returns
             <br />
             To Light
@@ -729,7 +727,7 @@ const HalfSpinImage = () => {
 const Line = () => {
   return (
     <div className="flex flex-col items-center">
-      <div className="border border h-40 w-0" />
+      <div className="border h-40 w-0" />
 
       <div className="border border-black/40 rounded-full p-2 flex items-center justify-center">
         <div className="border border-black/40 rounded-full p-7" />
