@@ -71,7 +71,7 @@ const Navbar = () => {
 
       {/* MENU MODAL */}
       <div
-        className={`fixed top-0 left-0 h-full w-[280px] sm:w-[320px] md:w-[360px] bg-white z-50 rounded-tr-3xl px-6 sm:px-8 py-8 sm:py-10 transition-transform duration-300 ${
+        className={`fixed top-0 left-0 h-full w-[280px] sm:w-[320px] md:w-[360px] bg-white z-50 rounded-tr-3xl px-6 sm:px-12 py-8 sm:py-10 transition-transform duration-300 ${
           openMenu ? "translate-x-0" : "-translate-x-full"
         }`}
       >

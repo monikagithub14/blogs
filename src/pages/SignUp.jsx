@@ -78,7 +78,7 @@ const SignUp = () => {
             <img
               src="/logoBlack.png"
               alt="Aditi Logo"
-              className="size-36 opacity-90"
+              className="size-28 opacity-90"
             />
           </div>
 

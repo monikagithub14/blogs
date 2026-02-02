@@ -7,7 +7,6 @@ export default function MenuPopup({ open, onClose }) {
   const testRef = useRef(null);
 
   const navigate = useNavigate();
-  
 
   const tabs = [
     "Sign In",
@@ -21,8 +20,6 @@ export default function MenuPopup({ open, onClose }) {
     "Contact Us",
   ];
 
-
-
   const handleTabClick = (tab) => {
     const actions = {
       "Sign In": () => navigate("/login"),
@@ -31,9 +28,9 @@ export default function MenuPopup({ open, onClose }) {
       Products: () => navigate("/productShowcase"),
       "Explore Gardens": () => navigate("/all-gardens"),
       "Psychometric Test": () => setTestOpen(true),
-      "Blogs": () => navigate("/blogs"),
+      Blogs: () => navigate("/blogs"),
 
-      About: () => navigate("/about"),
+      About: () => navigate("/about-us"),
       "Contact Us": () => navigate("/contact"),
     };
 
@@ -69,8 +66,6 @@ export default function MenuPopup({ open, onClose }) {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [open, testOpen, onClose]); // Added testOpen to dependencies
 
-
-
   if (!open) return null;
 
   return (
@@ -97,7 +92,6 @@ export default function MenuPopup({ open, onClose }) {
           </div>
         </div>
       </div>
-
     </>
   );
 }

@@ -10,7 +10,7 @@ import { useAddToCartMutation } from "../Redux/API/CartAPI";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [otp, setOtp] = useState("");
-  const [step, setStep] = useState(1); // 1: Email, 2: OTP
+  const [step, setStep] = useState(1);
   const [errorMsg, setErrorMsg] = useState("");
 
   const navigate = useNavigate();
@@ -92,7 +92,7 @@ const Login = () => {
             <img
               src="/logoBlack.png"
               alt="Aditi Logo"
-              className=" size-36 opacity-90"
+              className="size-28 opacity-90"
             />
           </div>
 
@@ -159,7 +159,7 @@ const Login = () => {
               </div>
             )}
 
-            <div className="flex flex-col text-center text-xs text-gray-500 mb-4 cursor-pointer">
+            <div className="flex flex-col text-center text-xs text-gray-500 mb-4 mt-6 md:mt-12 cursor-pointer">
               <p onClick={() => navigate("/signup")}>
                 Don’t Have Account ?{" "}
                 <span className="text-black font-medium">SIGN UP</span>
