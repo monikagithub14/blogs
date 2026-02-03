@@ -17,6 +17,7 @@ import AboutUs from "./components/About Us/AboutUs.jsx";
 import PowerofCombination from "./components/PowerOfCombination/PowerOfCombination.jsx";
 import ProductStructure from "./components/ProductStructure/ProductStructure.jsx";
 import Products from "./components/Products/Products.jsx";
+import Cart from "./components/Cart/Cart.jsx";
 // import MyAccount from "./components/MyAccount.jsx";
 
 function AppContent() {
@@ -44,6 +45,7 @@ function AppContent() {
         {/* <Route path="/product-structure" element={<ProductStructure />} />{" "} */}
         <Route path="/power-of-combination" element={<PowerofCombination />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/cart" element={<Cart />} />
       </Route>
     </Routes>
   );

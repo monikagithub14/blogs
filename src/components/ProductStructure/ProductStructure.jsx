@@ -76,7 +76,7 @@ const PerfumeCard = ({ data }) => {
   return (
     <div className="w-full flex-col items-center mb-20 relative flex">
       {/* --- Image (Full Screen Height) --- */}
-      <div className="sticky top-0 z-0 w-full h-screen">
+      <div className="sticky top-0 z-10 w-full h-screen">
         <img
           src={data.image}
           alt={data.headline}
@@ -185,40 +185,40 @@ function ProductStructure() {
         />
 
         <div className="absolute inset-0 flex items-center justify-center px-4">
-          <div className="bg-black/40 backdrop-blur-sm px-4 py-3 md:px-8 md:py-6 w-full max-w-[673px] h-auto sm:h-80">
+          <div className="bg-black/40 backdrop-blur-sm px-4 py-3 md:px-8 md:py-6 flex items-center justify-center flex-col w-full max-w-[673px] h-auto sm:h-80">
             <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              viewport={{ once: true }}
+              // initial={{ opacity: 0, y: 30 }}
+              // whileInView={{ opacity: 1, y: 0 }}
+              // transition={{ duration: 0.8, ease: "easeOut" }}
+              // viewport={{ once: true }}
               className="text-white text-4xl lg:text-5xl font-montserrat uppercase font-semibold text-center"
             >
               The Circle of Five
             </motion.h1>
             <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-              viewport={{ once: true }}
+              // initial={{ opacity: 0, y: 30 }}
+              // whileInView={{ opacity: 1, y: 0 }}
+              // transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+              // viewport={{ once: true }}
               className="text-white capitalize text-3xl text-center font-Poppins mt-6"
             >
               Five essences One consciousness
             </motion.p>
             <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
-              viewport={{ once: true }}
+              // initial={{ opacity: 0, y: 30 }}
+              // whileInView={{ opacity: 1, y: 0 }}
+              // transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+              // viewport={{ once: true }}
               className="w-full max-w-[400px] mx-auto text-white font-poppins text-[15px] italic text-center mt-4"
             >
               Each fragrance is a gateway. Together, they
               <span className="block">form the circle.</span>
             </motion.p>
             <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
-              viewport={{ once: true }}
+              // initial={{ opacity: 0, y: 30 }}
+              // whileInView={{ opacity: 1, y: 0 }}
+              // transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
+              // viewport={{ once: true }}
               className="font-poppins capitalize text-white text-center font-medium text-[20px] mt-7"
             >
               <span className="relative inline-block">

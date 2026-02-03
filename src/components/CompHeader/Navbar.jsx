@@ -128,7 +128,7 @@ const Navbar = () => {
           </p>
           <p
             className="cursor-pointer hover:text-gray-600 transition-colors"
-            onClick={() => handleNavigation("/blogs")}
+            onClick={() => handleNavigation("/")}
           >
             Blogs
           </p>
