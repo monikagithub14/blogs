@@ -45,7 +45,7 @@ const ContactUs = () => {
         {/* Right Form Card */}
         <div className="w-full md:w-1/2 flex justify-center md:justify-end md:pr-4">
           <div className="bg-white w-full max-w-md p-6 md:p-8 shadow-xl">
-            <h2 className="text-[15px] font-medium tracking-normal font-poppins">
+            <h2 className="text-[15px] font-medium tracking-wide font-poppins">
               EVERY CONNECTION BEGINS WITH INTENTION.
             </h2>
 
@@ -81,37 +81,33 @@ const ContactUs = () => {
               <input
                 type="text"
                 placeholder="Name*"
-                className="w-full bg-[#D9D9D936]/20 italic px-3 py-2 text-[13px] font-poppins placeholder:font-poppins placeholder:text-black/50"
+                className="w-full bg-[#D9D9D936]/20 italic px-3 py-2 text-[13px]"
               />
 
               <div className="flex flex-col md:flex-row gap-3">
                 <input
                   type="email"
                   placeholder="Email Address*"
-                  className="w-full md:w-1/2 bg-[#D9D9D936]/20 italic px-3 py-2 text-[13px] font-poppins placeholder:font-poppins placeholder:text-black/50"
+                  className="w-full md:w-1/2 bg-[#D9D9D936]/20 italic px-3 py-2 text-[13px]"
                 />
-
                 <input
                   type="text"
                   placeholder="Contact No*"
-                  className="w-full md:w-1/2 bg-[#D9D9D936]/20 italic px-3 py-2 text-[13px] font-poppins placeholder:font-poppins placeholder:text-black/50"
+                  className="w-full md:w-1/2 bg-[#D9D9D936]/20 italic px-3 py-2 text-[13px]"
                 />
-
               </div>
 
               <div className="flex flex-col md:flex-row gap-3">
                 <input
                   type="text"
                   placeholder="Country*"
-                  className="w-full md:w-1/2 bg-[#D9D9D936]/20 italic px-3 py-2 text-[13px] font-poppins placeholder:font-poppins placeholder:text-black/50"
+                  className="w-full md:w-1/2 bg-[#D9D9D936]/20 italic px-3 py-2 text-[13px]"
                 />
-
                 <input
                   type="text"
                   placeholder="Order No*"
-                  className="w-full md:w-1/2 bg-[#D9D9D936]/20 italic px-3 py-2 text-[13px] font-poppins placeholder:font-poppins placeholder:text-black/50"
+                  className="w-full md:w-1/2 bg-[#D9D9D936]/20 italic px-3 py-2 text-[13px]"
                 />
-
               </div>
 
               <p className="text-xs text-black font-montserrat">
@@ -122,14 +118,13 @@ const ContactUs = () => {
               <textarea
                 placeholder="Message*"
                 rows="4"
-                className="w-full border px-3 py-2 text-[13px] focus:outline-none italic font-poppins placeholder:font-poppins placeholder:text-black/50"
-              />
-
+                className="w-full border px-3 py-2 text-[13px] focus:outline-none italic"
+              ></textarea>
               <div className=" w-full flex items-center justify-center flex-col pb-2">
                 {" "}
                 <button
                   type="submit"
-                  className="text-sm font-poppins font-medium flex flex-row justify-center relative items-center gap-1"
+                  className="text-sm font-poppins flex flex-row justify-center relative items-center gap-1"
                 >
                   Connect With Us <MdKeyboardArrowRight />
                   <div className="w-4 h-0.5 left-0 top-6 bg-black absolute" />

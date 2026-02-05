@@ -50,8 +50,8 @@ const Navbar = () => {
             className="flex items-center gap-0.5 sm:gap-1 text-black text-xs sm:text-sm md:text-md font-medium whitespace-nowrap"
             onClick={() => navigate("/continue-experience")}
           >
-            <span className="hidden sm:inline text-[16px] font-normal">Continue Experience</span>
-            <span className="sm:hidden">Continue Experience</span>
+            <span className="hidden sm:inline">Continue Experience</span>
+            <span className="sm:hidden">Continue</span>
             <FaAngleRight
               size={12}
               className="sm:w-3.5 sm:h-3.5 md:w-4 md:h-4"

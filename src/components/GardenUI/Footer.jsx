@@ -46,7 +46,7 @@ export default function Footer({ scrollHintRef, navigate }) {
         border border-white/40 px-3 py-3 md:px-6 md:py-6 rounded-full items-center z-10 gap-2 shadow-lg"
       >
         <MdMouse className="text-base md:text-lg" />
-        <span className="text-xs sm:text-sm tracking-normal font-medium hidden md:inline">
+        <span className="text-xs sm:text-sm tracking-wide font-medium hidden md:inline">
           SCROLL TO EXPLORE GARDEN
         </span>
       </div>

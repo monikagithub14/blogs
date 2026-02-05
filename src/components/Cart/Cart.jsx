@@ -6,7 +6,6 @@ import {
   useAddToCartMutation,
 } from "../../Redux/API/CartAPI"; // Path check kar lena
 import { FaAngleRight } from "react-icons/fa6";
-import AddAddressModal from "../Models/AddAddressModal.jsx";
 
 // ==========================================
 // 🛠️ CONFIGURATION
@@ -93,7 +92,6 @@ const MOCK_RESPONSE = {
 };
 
 const Cart = () => {
-  const [openModal, setOpenModal] = useState(false);
   const { data: apiData, isLoading: apiLoading } = useGetCartQuery(undefined, {
     skip: USE_MOCK_DATA,
   });
@@ -233,15 +231,15 @@ const Cart = () => {
 
                 <div className="flex-1 p-8 flex flex-col justify-center gap-4">
                   <div>
-                    <h3 className="font-Montserrat text-[18px] font-medium text-gray-900 leading-tight mb-2">
+                    <h3 className="font-Montserrat text-lg text-gray-900 leading-tight mb-2">
                       {product.name}
                     </h3>
-                    <p className="text-[13px] font-poppins text-gray-400 leading-relaxed max-w-md">
+                    <p className="text-xs text-gray-400 leading-relaxed max-w-md">
                       {product.description}
                     </p>
                   </div>
 
-                  <div className="text-[30px] font-medium font-Montserrat text-[#000000] mt-2">
+                  <div className="text-3xl font-Montserrat text-[#000000] mt-2">
                     $ {product.price}
                   </div>
 
@@ -282,8 +280,8 @@ const Cart = () => {
                       onClick={() => handleRemove(item._id)}
                       disabled={isRemoving}
                     >
-                      <span className="hidden sm:inline font-poppins text-[15px] font-normal">
-                        {isRemoving ? "Removing..." : "Remove from cart"}
+                      <span className="hidden sm:inline font-poppins">
+                        {isRemoving ? "Removing..." : "Remove From Cart"}
                       </span>
                       <span className="sm:hidden">Continue</span>
                       <FaAngleRight
@@ -306,7 +304,7 @@ const Cart = () => {
             <div className="flex flex-col gap-4 text-sm mb-6 border-b border-gray-200 pb-8">
               <div className="flex justify-between font-Poppins ">
                 <span className="text-[#000000]">
-                  Price ( {totalItems} items )
+                  Price ( {totalItems} Items )
                 </span>
                 <span className="text-gray-600">$ {subTotal}</span>
               </div>
@@ -315,23 +313,23 @@ const Cart = () => {
                 <span className="text-green-500">-$ {discountAmount}</span>
               </div>
               <div className="flex justify-between ">
-                <span>Delivery charges</span>
+                <span>Delivery Charges</span>
                 <span className="text-gray-600">$ {deliveryCharge}</span>
               </div>
             </div>
             <div className="flex justify-between items-center">
               <span className="text-xl font-Poppins text-[#000000]">
-                Total amount
+                Total Amount
               </span>
               <span className="font-Poppins text-gray-600">$ {finalTotal}</span>
             </div>
           </div>
           <div className="bg-[#FAFAFA] rounded-[20px] p-6 flex justify-between items-center">
             <span className="text-sm font-medium text-gray-900">
-              Delivery address
+              Delivery Address
             </span>
-            <button onClick={() => setOpenModal(true)} className="text-green-500 text-xs font-medium hover:underline">
-              + Add address
+            <button className="text-green-500 text-xs font-medium hover:underline">
+              + Add Address
             </button>
           </div>
           <div className="flex flex-row justify-between gap-4">
@@ -341,10 +339,10 @@ const Cart = () => {
                 // onClick={() => handleRemove(item._id)}
                 // disabled={isRemoving}
               >
-                <span className="hidden sm:inline font-poppins text-[15px] font-normal">
-                  Continue experience
+                <span className="hidden sm:inline font-poppins">
+                  Continue Experience
                 </span>
-                <span className="sm:hidden">Continue experience</span>
+                <span className="sm:hidden">Continue</span>
                 <FaAngleRight
                   size={12}
                   className="sm:w-3.5 sm:h-3.5 md:w-4 md:h-4"
@@ -362,8 +360,8 @@ const Cart = () => {
                 // onClick={() => handleRemove(item._id)}
                 // disabled={isRemoving}
               >
-                <span className="hidden sm:inline font-poppins text-[15px] font-normal">
-                  Place order
+                <span className="hidden sm:inline font-poppins">
+                  Place Order
                 </span>
                 <span className="sm:hidden">Continue</span>
                 <FaAngleRight
@@ -380,8 +378,6 @@ const Cart = () => {
           </div>
         </div>
       </div>
-       {/* Modal */}
-      {openModal && <AddAddressModal onClose={() => setOpenModal(false)} />}
     </div>
   );
 };

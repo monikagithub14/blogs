@@ -208,21 +208,11 @@ const Footer = () => {
       </div>
 
       {/* Bottom Copyright Section */}
-      <div className="border-t border-gray-700 mt-6 md:mt-8 pt-4 md:pt-5 
-        flex flex-col md:flex-row 
-        items-start md:items-center 
-        justify-start md:justify-between 
-        gap-3 md:gap-0 
-        text-xs md:text-sm font-poppins font-rafgins text-gray-400"
-      >
-        <p className="text-left text-white">
+      <div className="border-t border-gray-700 mt-6 md:mt-8 pt-4 md:pt-5 flex flex-col md:flex-row justify-between items-center gap-3 md:gap-0 text-xs md:text-sm font-poppins font-rafgins text-gray-400">
+        <p className="text-center md:text-left text-white">
           ©2025 All Copyrights Reserved
         </p>
-
-        <div className="flex flex-col md:flex-row 
-          items-start md:items-center 
-          gap-2 md:gap-4 font-rafgins"
-        >
+        <div className="flex flex-wrap items-center justify-center md:justify-end gap-3 md:gap-4 font-rafgins">
           <p className="cursor-pointer text-white">Privacy Preferences</p>
           <p className="cursor-pointer text-[#D9D9D969]">Terms & Services</p>
           <p className="cursor-pointer text-[#D9D9D969]">Privacy Policy</p>

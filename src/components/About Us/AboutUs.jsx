@@ -12,7 +12,7 @@
 //   return (
 //     <div className="">
 //       <div className="mx-4 sm:mx-6 md:mx-8 lg:mx-10 py-8 md:py-12 lg:py-16 mt-28">
-//         <p className="uppercase tracking-[0.1em] text-2xl sm:text-4xl font-light text-center mb-8 sm:mb-10 lg:mb-12 ">
+//         <p className="uppercase tracking-[0.1em] text-2xl sm:text-4xl font-light text-center mb-8 sm:mb-10 lg:mb-12 leading-snug">
 //           Every Flower Holds A<br className="hidden sm:block" />
 //           Whisper Of Light.
 //         </p>
@@ -258,13 +258,13 @@
 
 //               {/* Body */}
 //               <div className="space-y-1 sm:space-y-6 italic">
-//                 <p className="text-[9px] sm:text-base text-black/55  sm:leading-relaxed">
+//                 <p className="text-[9px] sm:text-base text-black/55 leading-snug sm:leading-relaxed">
 //                   A movement of consciousness through beauty. An invitation to
 //                   live with presence, intention, and truth. In a world that
 //                   pulls outward, it offers a return inward.
 //                 </p>
 
-//                 <p className="text-[9px] sm:text-base text-black/55  sm:leading-relaxed">
+//                 <p className="text-[9px] sm:text-base text-black/55 leading-snug sm:leading-relaxed">
 //                   In a time of acceleration, a space of stillness. In the midst
 //                   of form, a remembrance of essence. An invitation to rise, to
 //                   blossom into our highest form of beauty, and to embody
@@ -280,7 +280,7 @@
 
 //               {/* CTA */}
 //               <div className="flex flex-col items-center">
-//                 <button className="text-[9px] sm:text-sm tracking-normal uppercase font-bold flex items-center gap-1 hover:opacity-70 transition">
+//                 <button className="text-[9px] sm:text-sm tracking-wide uppercase font-bold flex items-center gap-1 hover:opacity-70 transition">
 //                   Enter the circle
 //                   <FaAngleRight size={10} />
 //                 </button>
@@ -378,33 +378,28 @@ import { FaAngleRight } from "react-icons/fa6";
 const AboutUs = () => {
   return (
     // Main Container with Scroll Snap
-    <div className="h-full overflow-y-scroll scroll-y-snap scroll-smooth no-scrollbar scrollbar-hide">
+    <div className="h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth no-scrollbar scrollbar-hide">
       {/* SECTION 1: Header Text */}
       {/* SECTION 1: Header Text */}
-      <section className="h-screen snap-center relative flex flex-col items-center justify-center w-full px-4 sm:px-6 md:px-8 lg:px-10 py-8 md:py-12 lg:py-10">
-
-        <div className="flex flex-col items-center justify-center z-10 text-center">
-          <motion.h2
+      <section className="h-screen snap-center relative flex flex-col items-center justify-center mx-4 sm:mx-6 md:mx-8 lg:mx-10 py-8 md:py-12 lg:py-16">
+        <div className="flex flex-col items-center justify-center z-10">
+          <motion.p
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: false, amount: 0.4 }}
-            className="uppercase tracking-normal text-center text-xl sm:text-4xl lg:text-[50px] font-medium font-montserrat leading-snug sm:leading-snug lg:leading-tight"
+            viewport={{ once: false, amount: 0.8 }}
+            className="uppercase tracking-[0.1em] text-2xl sm:text-4xl lg:text-6xl font-medium text-center leading-snug"
           >
-            Every Flower Holds A
-            <br />
+            Every Flower Holds A<br className="hidden sm:block" />
             Whisper Of Light
-          </motion.h2>
+          </motion.p>
         </div>
 
-        {/* Pendulum */}
-        <div className="absolute top-[60%] sm:top-[65%] left-1/2 -translate-x-1/2 z-0">
+        {/* Pendulum positioned absolutely to not affect text centering */}
+        <div className="absolute top-[60%] sm:top-[65%] z-0">
           <HalfSpinImage />
         </div>
-
       </section>
-
-
 
       {/* SECTION 2: Maison Aditi Description */}
       <section className="h-screen snap-center flex flex-col items-center justify-center text-center px-4 sm:px-6 md:px-8 bg-white">
@@ -413,22 +408,21 @@ const AboutUs = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: false, amount: 0.5 }}
-          className="uppercase tracking-normal text-2xl sm:text-4xl lg:text-[50px] font-semibold font-montserrat text-center mb-8 sm:mb-10 lg:mb-10"
+          className="uppercase tracking-wide text-2xl sm:text-4xl lg:text-6xl font-montserrat  font-semibold text-center mb-8 sm:mb-10 lg:mb-12 leading-snug"
         >
           Maison Aditi A Living Origin
         </motion.p>
 
-        {/* SAME LINE HEIGHT + SAME GAP LIKE DIVINE ESSENCE */}
-        <div className="space-y-3 sm:space-y-5 italic px-10 md:px-24 text-center">
+        <div className="space-y-4 sm:space-y-8 tracking-wide italic max-w-4xl">
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             viewport={{ once: false, amount: 0.8 }}
-            className="text-sm sm:text-base tracking-normal leading-4 sm:leading-6 text-black/80"
+            className="text-sm sm:text-base tracking-wider leading-5 sm:leading-7 text-black/80"
           >
-            Maison Aditi Opens A New Way Of Experiencing Perfume <br />
-            As A Living Expression Of Consciousness In Form.
+            Maison Aditi Opens A New Way Of Experiencing Perfume <br /> As A
+            Living Expression Of Consciousness In Form.
           </motion.p>
 
           <motion.p
@@ -436,14 +430,14 @@ const AboutUs = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
             viewport={{ once: false, amount: 0.8 }}
-            className="text-sm sm:text-base tracking-normal leading-4 sm:leading-6 text-black/80"
+            className="text-sm sm:text-base tracking-wider leading-5 sm:leading-7 text-black/80"
           >
-            Each Fragrance Is A Prayer In Scent, An Offering, A Message, A Vibration <br />
-            To Remind Us Of Who We Truly Are And What We Are Called To Become.
+            Each Fragrance Is A Prayer In Scent, An Offering, A Message, A
+            Vibration <br /> To Remind Us Of Who We Truly Are And What We Are
+            Called To Become.
           </motion.p>
         </div>
       </section>
-
 
       {/* SECTION 3: Full Width Image */}
       <section className="h-screen snap-center w-full">
@@ -462,7 +456,7 @@ const AboutUs = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: false, amount: 0.8 }}
-            className="uppercase tracking-normal text-2xl sm:text-4xl lg:text-[50px] font-semibold font-montserrat text-center mb-8 sm:mb-10 lg:mb-10 "
+            className="uppercase tracking-[0.1em] font-semibold text-2xl sm:text-4xl lg:text-6xl text-center mb-8 sm:mb-10 lg:mb-12 leading-snug"
           >
             Philosophy & Source
           </motion.p>
@@ -473,7 +467,7 @@ const AboutUs = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
               viewport={{ once: false, amount: 0.8 }}
-              className="text-sm sm:text-base tracking-normal leading-4 sm:leading-6 text-black/80"
+              className="text-sm sm:text-base tracking-wider leading-5 sm:leading-7 text-black/80"
             >
               Maison Aditi Arises From A Vision Where Consciousness Awakens
               Within Life Itself, And Where Every Movement, Form, And Breath
@@ -516,37 +510,39 @@ const AboutUs = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: false, amount: 0.8 }}
-            className="uppercase tracking-normal text-2xl sm:text-4xl lg:text-[50px] font-semibold font-montserrat text-center mb-8 sm:mb-10 lg:mb-10 leading-snug sm:leading-snug lg:leading-tight"
+            className="uppercase tracking-[0.1em] text-base sm:text-2xl md:text-5xl font-semibold font-montserrat text-black"
           >
-            From this vision, emerges a <br /> fragrant form of<br /> consciousness{" "}
+            From this vision, <br /> emerges a fragrant form of
+            consciousness{" "}
           </motion.h2>
         </div>
       </section>
 
       {/* SECTION 6: The Divine Essence Collection */}
-      <section className="min-h-screen snap-center flex items-center justify-center px-4 sm:px-8 md:px-8 bg-white py-16 sm:py-20">
+      <section className="h-screen snap-center flex items-center justify-center px-4 sm:px-6 md:px-8 bg-white">
         <div className="bg-white text-black flex justify-center w-full">
-          <div className="max-w-5xl text-center">
+          <div className="max-w-full text-center">
             <motion.p
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
               viewport={{ once: false, amount: 0.8 }}
-              className="uppercase tracking-normal text-2xl sm:text-4xl lg:text-[50px] font-semibold font-montserrat text-center mb-8 sm:mb-10 lg:mb-10 "
+              className="uppercase tracking-[0.1em] font-semibold text-2xl sm:text-4xl lg:text-6xl text-center mb-8 sm:mb-10 lg:mb-12 leading-snug"
             >
               The Divine Essence Collection
             </motion.p>
 
-            <div className="space-y-3 sm:space-y-5 italic px-10 md:px-24 text-center">
+            <div className="space-y-4 sm:space-y-8  italic px-10 md:px-24 text-center">
               <motion.p
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
                 viewport={{ once: false, amount: 0.8 }}
-                className="text-sm sm:text-base tracking-normal leading-4 sm:leading-6 text-black/80"
+                className="text-sm sm:text-base tracking-wider leading-5 sm:leading-7 text-black/80"
               >
-                Divine Essence Is The Inaugural Expression Of Maison Aditi, A Living Map Of <br />
-                Consciousness, Inspired By The Mother's Symbol.
+                Divine Essence Is The Inaugural Expression Of Maison Aditi, A
+                Living Map Of <br /> Consciousness, Inspired By The Mother's
+                Symbol.
               </motion.p>
 
               <motion.p
@@ -554,10 +550,12 @@ const AboutUs = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
                 viewport={{ once: false, amount: 0.8 }}
-                className="text-sm sm:text-base tracking-normal leading-4 sm:leading-6 text-black/80"
+                className="text-sm sm:text-base tracking-wider leading-5 sm:leading-7 text-black/80"
               >
-                At Its Center Resides The Still Point — The Silent Presence From Which All Expression Arises. From This Center <br />
-                Radiate The Soul Forces That Power Through Which Consciousness Manifests And Acts In Life.
+                At Its Center Resides The Still Point — The Silent Presence From
+                Which All Expression Arises. From This Center
+                <br /> Radiate The Soul Forces That Power Through Which
+                Consciousness Manifests And Acts In Life.
               </motion.p>
 
               <motion.p
@@ -565,11 +563,13 @@ const AboutUs = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
                 viewport={{ once: false, amount: 0.8 }}
-                className="text-sm sm:text-base tracking-normal leading-4 sm:leading-6 text-black/80"
+                className="text-sm sm:text-base tracking-wider leading-5 sm:leading-7 text-black/80"
               >
-                Each Fragrance Embodies One Of These Forces, Inviting A Lived Experience Of Alignment: Wisdom, Strength, <br />
-                Harmony, Perfection, And Divine Truth. Together, They Form A Circular Journey, <br />
-                Not To Be Followed In Sequence, But Entered Intuitively.
+                Each Fragrance Embodies One Of These Forces, Inviting A Lived
+                Experience Of Alignment: Wisdom, Strength, <br /> Harmony,
+                Perfection, And Divine Truth. Together, They Form A Circular
+                Journey, <br /> Not To Be Followed In Sequence, But Entered
+                Intuitively.
               </motion.p>
 
               <motion.p
@@ -577,14 +577,14 @@ const AboutUs = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
                 viewport={{ once: false, amount: 0.8 }}
-                className="text-sm sm:text-base tracking-normal leading-4 sm:leading-6 text-black/80"
+                className="text-sm sm:text-base tracking-wider leading-5 sm:leading-7 text-black/80"
               >
-                These Are Not Merely Perfumes To Be Chosen. They Are Fragrances <br />
+                These Are Not Merely Perfumes To Be Chosen. They Are Fragrances{" "}
+                <br />
                 That Choose You On Your Path To Awakening.
               </motion.p>
             </div>
           </div>
-
         </div>
       </section>
 
@@ -615,7 +615,7 @@ const AboutUs = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: false, amount: 0.8 }}
-            className="uppercase tracking-normal text-2xl sm:text-4xl lg:text-[50px] font-semibold font-montserrat text-center mb-8 sm:mb-10 lg:mb-10 leading-snug sm:leading-snug lg:leading-tight"
+            className="uppercase tracking-[0.1em] text-base sm:text-2xl md:text-5xl font-semibold font-montserrat text-black"
           >
             This Vision Asked To
             <br />
@@ -625,7 +625,7 @@ const AboutUs = () => {
       </section>
 
       {/* SECTION 8: Founder's Offering */}
-      <section className="h-full snap-center relative z-10 flex items-center justify-center px-4 sm:px-8 md:px-8 py-10 bg-white">
+      <section className="h-screen snap-center relative z-10 flex items-center justify-center px-4 sm:px-6 md:px-8 bg-white">
         <div className="bg-white text-black flex justify-center w-full">
           <div className="max-w-4xl text-center">
             <motion.p
@@ -633,18 +633,18 @@ const AboutUs = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
               viewport={{ once: false, amount: 0.8 }}
-              className="uppercase tracking-normal text-2xl sm:text-4xl lg:text-[50px] font-semibold font-montserrat text-center mb-8 sm:mb-10 lg:mb-10 "
+              className="uppercase tracking-[0.1em] font-semibold text-2xl sm:text-4xl lg:text-6xl text-center mb-8 sm:mb-10 lg:mb-12 leading-snug"
             >
               Founder's Offering
             </motion.p>
 
-            <div className="space-y-3 sm:space-y-6 italic">
+            <div className="space-y-4 sm:space-y-10 italic">
               <motion.p
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
                 viewport={{ once: false, amount: 0.8 }}
-                className="text-sm sm:text-base tracking-normal leading-4 sm:leading-5 text-black/80"
+                className="text-sm sm:text-base tracking-wider leading-5 sm:leading-7 text-black/80"
               >
                 Maison Aditi Emerged Through A Personal Journey Of Shedding,
                 Remembering, And Becoming.
@@ -655,7 +655,7 @@ const AboutUs = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
                 viewport={{ once: false, amount: 0.8 }}
-                className="text-sm sm:text-base tracking-normal leading-4 sm:leading-5 text-black/80"
+                className="text-sm sm:text-base tracking-wider leading-5 sm:leading-7 text-black/80"
               >
                 A Lifelong Movement Of Releasing Inner Limitations, Of Finding
                 Voice, Purpose, And Authentic Expression — Until Encountering
@@ -668,7 +668,7 @@ const AboutUs = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
                 viewport={{ once: false, amount: 0.8 }}
-                className="text-sm sm:text-base tracking-normal leading-4 sm:leading-5 text-black/80"
+                className="text-sm sm:text-base tracking-wider leading-5 sm:leading-7 text-black/80"
               >
                 What Followed Was A Response To The Calling. Maison Aditi Arose
                 As An Offering, A Way To Give Form To An Inner Awakening. To
@@ -682,128 +682,119 @@ const AboutUs = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
                 viewport={{ once: false, amount: 0.8 }}
-                className="text-sm sm:text-base tracking-normal leading-4 sm:leading-5 text-black/80"
+                className="text-sm sm:text-base tracking-wider leading-5 sm:leading-7 text-black/80"
               >
                 This Work Is Offered To The Divine, And To Life Itself, With The
                 Hope That It May Serve As A Quiet Companion On The Path Of
                 Remembrance.
               </motion.p>
             </div>
-
           </div>
         </div>
       </section>
 
       {/* SECTION 9: Circle Container */}
-      <section className="min-h-screen snap-center flex flex-col items-center justify-start pt-0 sm:pt-0 md:pt-0 lg:pt-0 pb-10 px-4 bg-white gap-6 sm:gap-10 overflow-hidden">
-
-        {/* Circle Wrapper */}
-        <div className="w-full flex justify-center items-center px-3 sm:px-0">
+      <section className="h-screen snap-center snap-always flex flex-col items-center sm:mt-20 md:mt-40 lg:mt-60 justify-center px-4 bg-white gap-4 sm:gap-8">
+        <div className="bg-white flex justify-center items-center">
+          {/* Circle Container */}
+          {/* <motion.div */}
           <div
+            // initial={{ opacity: 0, scale: 0.9 }}
+            // whileInView={{ opacity: 1, scale: 1 }}
+            // transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.9 }}
             className="
-  relative
-  w-[92vw]
-  max-w-[400px]
-  sm:max-w-[700px]
-  lg:max-w-[800px]
-  rounded-full
-  border border-black/30
-  bg-white
-  flex items-center justify-center
-  py-10
-  sm:py-0
-  sm:aspect-square
-  px-3 sm:px-10 md:px-14
-"
-
+        relative
+        w-[88vw]
+        max-w-[420px]
+        sm:max-w-[520px]
+        md:max-w-[620px]
+        lg:max-w-[800px]
+        h-[88vw]
+        max-h-[420px]
+        sm:max-h-[520px]
+        md:max-h-[620px]
+        lg:max-h-[800px]
+        flex
+        items-center
+        justify-center
+        rounded-full
+        border
+        border-black/30
+      "
           >
-
             {/* Content */}
-            <div className="text-center w-full space-y-2 sm:space-y-5 md:space-y-6 px-2 sm:px-0">
-
+            <div className="text-center px-4 sm:px-10 md:px-16 space-y-4 sm:space-y-4 lg md:space-y-6 lg:space-y-10">
               {/* Title */}
-              <h2 className="uppercase text-[16px] sm:text-xl lg:text-[50px] leading-[20px] sm:leading-snug">
+              <h2 className="uppercase tracking-[0.08em] text-[10px] sm:text-2xl md:text-4xl font-bold mb-2 sm:mb-4">
                 Maison Aditi Is More
                 <br />
                 Than A Maison
               </h2>
 
               {/* Subheading */}
-              <p className="italic text-[10px] sm:text-sm font-bold text-black/80">
+              <p className="italic text-[10px] sm:text-sm font-bold mb-2 sm:mb-4">
                 it is a calling
               </p>
 
               {/* Body */}
-              <div className="space-y-3 sm:space-y-6 italic">
-                <p className="text-[10px] sm:text-sm md:text-base leading-4 sm:leading-6 text-black/80">
-                  A movement of consciousness through beauty. An invitation to live
-                  with presence, intention, and truth. In a world that pulls outward,
-                  it offers a return inward.
+              <div className="space-y-1 sm:space-y-6 italic">
+                <p className="text-xs sm:text-sm md:text-base md:tracking-wider leading-2 sm:leading-7 text-black/80">
+                  A movement of consciousness through beauty. An invitation to
+                  live with presence, intention, and truth. In a world that
+                  pulls outward, it offers a return inward.
                 </p>
 
-                <p className="text-[10px] sm:text-sm md:text-base leading-4 sm:leading-6 text-black/80">
-                  In a time of acceleration, a space of stillness. In the midst of
-                  form, a remembrance of essence. An invitation to rise, to blossom
-                  into our highest form of beauty, and to embody individually and
-                  collectively the consciousness we are here to become.
+                <p className="text-xs sm:text-sm md:text-base md:tracking-wider leading-2 sm:leading-7 text-black/80">
+                  In a time of acceleration, a space of stillness. In the midst
+                  of form, a remembrance of essence. An invitation to rise, to
+                  blossom into our highest form of beauty, and to embody
+                  individually and collectively the consciousness we are here to
+                  become.
                 </p>
               </div>
 
               {/* Closing Line */}
-              <p className="text-[10px] sm:text-base font-medium italic text-black/90">
+              <p className="text-[9px] sm:text-base font-medium italic my-2 sm:my-5">
                 An olfactive journey unfolds within.
               </p>
 
               {/* CTA */}
-              <div className="flex justify-center pt-2 sm:pt-4">
-                <button className="relative flex items-center gap-1 text-black text-xs sm:text-base font-semibold font-poppins group">
-
-                  {/* TEXT */}
-                  <span className="">
-                    <span className="relative inline-block">
-                      En
-                      {/* underline only for first 2 letters */}
-                      <span className="absolute left-0 -bottom-1 w-full h-[2px] bg-black rounded-full"></span>
-                    </span>
-                    ter the circle
+              <div className="flex flex-col gap-2 sm:gap-2 items-center justify-center">
+                <button
+                  className="flex items-center relative gap-0.5 mt-4 md:mt-3 sm:gap-1 text-black text-xs sm:text-sm md:text-md font-medium whitespace-nowrap"
+                  // onClick={() => navigate("/continue-experience")}
+                >
+                  <span className="hidden sm:inline font-poppins font-semibold  text-lg">
+                    Enter the circle
                   </span>
-
-                 {/* <span className="sm:hidden">
-                    <span className="relative inline-block">
-                      Co
-                      <span className="absolute left-0 -bottom-1 w-full h-[2px] bg-black rounded-full"></span>
-                    </span>
-                    ntinue
-                  </span> */}
-
+                  <span className="sm:hidden">Continue</span>
                   <FaAngleRight
-                    size={14}
-                    className="transition-transform duration-300 group-hover:translate-x-1"
+                    size={12}
+                    className="sm:w-3.5 sm:h-3.5 md:w-4 md:h-4"
                   />
+                  <div className="absolute -bottom-1 w-4 sm:w-5 bg-black h-0.5 sm:h-1 rounded-xl" />
                 </button>
               </div>
-
-
             </div>
           </div>
         </div>
 
-        {/* Pendulum */}
-        <div className="mt-4 sm:mt-6">
+        {/* Pendulum moved here */}
+        <div>
           <HalfSpinImage />
         </div>
       </section>
 
-
       {/* SECTION 10: Final Text */}
-      <section className="snap-center flex flex-col items-center justify-center my-36">
+      <section className="h-screen snap-center flex flex-col items-center justify-center">
         <div className="bg-white flex justify-center items-center px-4 sm:px-6">
           <motion.h2
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: false, amount: 0.4 }}
-            className="uppercase tracking-normal text-center text-xl sm:text-4xl lg:text-[50px] font-medium font-montserrat leading-snug sm:leading-snug lg:leading-tight"
+            className="uppercase font-montserrat tracking-[0.1em] text-base sm:text-2xl md:text-4xl font-medium text-center leading-snug"
           >
             Every Breath Returns
             <br />
@@ -863,16 +854,11 @@ const HalfSpinImage = () => {
 const Line = () => {
   return (
     <div className="flex flex-col items-center">
-      {/* Line */}
-      <div className="border h-32 sm:h-36 md:h-40 w-0" />
+      <div className="border h-40 w-0" />
 
-      {/* Outer circle */}
-      <div className="border border-black/40 rounded-full p-2 sm:p-2 md:p-2 flex items-center justify-center">
-        
-        {/* Inner circle */}
-        <div className="border border-black/40 rounded-full p-6 sm:p-6 md:p-7" />
+      <div className="border border-black/40 rounded-full p-2 flex items-center justify-center">
+        <div className="border border-black/40 rounded-full p-7" />
       </div>
     </div>
   );
 };
-
