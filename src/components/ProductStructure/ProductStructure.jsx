@@ -13,7 +13,7 @@ const perfumesData = [
     headline: "JYOTI ABSOLUE",
     title: "WISDOM",
     subtitle: "The quiet intelligence that sees before it acts.",
-    ctaText: "Discover Jyoti Absolue", // removed '>' from here as we use Icon
+    ctaText: "Discover jyoti absolue", // removed '>' from here as we use Icon
     // dropdown: [
     //   "The Essence",
     //   "Spritual Resonance",
@@ -27,39 +27,39 @@ const perfumesData = [
     headline: "KĀLI ROUGE",
     title: "STRENGTH",
     subtitle: "Force in its purest form",
-    ctaText: "Discover Kāli Rouge",
+    ctaText: "Discover kāli rouge",
   },
   {
     id: 3,
     image: "/product-structure-Image/image4.jpg",
     headline: "ROSE BHAKTĪ",
     title: "HARMONY",
-    subtitle: "The Art Of Balance Where Devotion Becomes Ease.",
-    ctaText: "Discover Rose Bhaktī",
+    subtitle: "The art of balance where devotion becomes ease.",
+    ctaText: "Discover rose bhaktī",
   },
   {
     id: 4,
     image: "/product-structure-Image/image5.jpg",
     headline: "LILA DORÉE",
     title: "PERFECTION",
-    subtitle: "Refinement In Motion Playful, Luminous, Exact",
-    ctaText: "Discover Lila Dorée >",
+    subtitle: "Refinement in motion playful, luminous, exact",
+    ctaText: "Discover lila dorée",
   },
   {
     id: 5,
     image: "/product-structure-Image/image6.jpg",
     headline: "SHAKTI ÉTERNELLE",
     title: "DIVINE CONSCIOUSNESS",
-    subtitle: "The Source From Which All Movements Arise.",
-    ctaText: "Enter Shakti Éternelle >",
+    subtitle: "The source from which all movements arise.",
+    ctaText: "Enter shakti eternelle",
   },
 ];
 
 const accordionSections = [
-  "The Essence",
-  "Spritual Resonance",
-  "Olfactive Structure",
-  "When To Wear",
+  "The essence",
+  "Spritual resonance",
+  "Olfactive structure",
+  "When to wear",
 ];
 
 // ==========================================
@@ -86,6 +86,20 @@ const PerfumeCard = ({ data }) => {
           <div className="h-10 md:h-20 w-0.5 rounded-full flex items-center justify-center origin-center bg-black/40" />
         </div>
       </div>
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <motion.img
+          src={data.image}
+          alt={data.headline}
+          className="w-full h-full object-cover"
+          initial={{ scale: 1.1 }}
+          whileInView={{ scale: 1 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+        />
+        <div className="min-h-screen flex justify-center">
+          <div className="h-10 md:h-20 w-0.5 rounded-full flex items-center justify-center origin-center bg-black/40" />
+        </div>
+      </div>
+
 
       <div className="relative z-10 w-full bg-white flex flex-col items-center px-4 sm:px-6 md:px-0 mt-6 md:mt-10 lg:mt-20">
         {/* --- Header Text Section --- */}
@@ -95,7 +109,7 @@ const PerfumeCard = ({ data }) => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-[55px] font-[600] tracking-wide font-montserrat uppercase"
+            className="text-xl sm:text-xl md:text-4xl lg:text-[50px] font-semibold tracking-normal font-montserrat uppercase"
           >
             {data.headline || "Perfume Name"}
           </motion.h1>
@@ -104,7 +118,7 @@ const PerfumeCard = ({ data }) => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             viewport={{ once: true }}
-            className="mt-6 md:mt-10 lg:mt-10 text-lg md:text-2xl lg:text-[33px] font-medium font-poppins uppercase"
+            className="mt-2 md:mt-4 lg:mt-4 text-lg md:text-2xl lg:text-[30px] font-normal font-poppins uppercase"
           >
             {data.title || "Attribute"}
           </motion.p>
@@ -113,7 +127,7 @@ const PerfumeCard = ({ data }) => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
             viewport={{ once: true }}
-            className="mt-2 md:mt-4 text-[9px] md:text-[14px] lg:text-[16px] max-w-2xl mx-auto italic capitalize [word-spacing:0.12em] px-2"
+            className="text-xs sm:text-sm md:text-base lg:text-[15px] leading-[1.6] sm:leading-[1.8] max-w-5xl mx-auto italic text-black font-normal tracking-normal capitalize text-center mt-6"
           >
             {data.subtitle}
           </motion.p>
@@ -137,9 +151,8 @@ const PerfumeCard = ({ data }) => {
                 >
                   <span className="font-medium font-poppins">{title}</span>
                   <span
-                    className={`transform transition-transform duration-300 ${
-                      isActive ? "rotate-180" : ""
-                    }`}
+                    className={`transform transition-transform duration-300 ${isActive ? "rotate-180" : ""
+                      }`}
                   >
                     <IoIosArrowDown />
                   </span>
@@ -152,7 +165,7 @@ const PerfumeCard = ({ data }) => {
 
         {/* --- CTA Button (Updated: Only 'Di' Underlined) --- */}
         <div className="mt-14 md:mt-20 lg:mt-32 mb-12 md:mb-14 lg:mb-16 flex items-center gap-2">
-          <button className="text-sm md:text-xl lg:text-[20px] font-poppins font-semibold text-left">
+          <button className="text-sm md:text-xl lg:text-[20px] font-poppins font-medium text-left">
             {/* Part 1: "Di" with Underline */}
             <span className="relative inline-block">
               {firstTwoChars}
@@ -184,14 +197,14 @@ function ProductStructure() {
           className="w-full h-full object-cover"
         />
 
-        <div className="absolute inset-0 flex items-center justify-center px-4">
+        <div className="absolute inset-0 flex items-center justify-center px-4 py-auto sm:py-5">
           <div className="bg-black/40 backdrop-blur-sm px-4 py-3 md:px-8 md:py-6 flex items-center justify-center flex-col w-full max-w-[673px] h-auto sm:h-80">
             <motion.h1
               // initial={{ opacity: 0, y: 30 }}
               // whileInView={{ opacity: 1, y: 0 }}
               // transition={{ duration: 0.8, ease: "easeOut" }}
               // viewport={{ once: true }}
-              className="text-white text-4xl lg:text-5xl font-montserrat uppercase font-semibold text-center"
+              className="text-white text-4xl lg:text-[40px] sm:text-[20px] font-montserrat uppercase font-semibold text-center"
             >
               The Circle of Five
             </motion.h1>
@@ -200,33 +213,35 @@ function ProductStructure() {
               // whileInView={{ opacity: 1, y: 0 }}
               // transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
               // viewport={{ once: true }}
-              className="text-white capitalize text-3xl text-center font-Poppins mt-6"
+              className="text-white text-2xl sm:text-sm lg:text-[30px] text-center font-Poppins mt-6"
             >
-              Five essences One consciousness
+              Five essences one consciousness
             </motion.p>
             <motion.p
               // initial={{ opacity: 0, y: 30 }}
               // whileInView={{ opacity: 1, y: 0 }}
               // transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
               // viewport={{ once: true }}
-              className="w-full max-w-[400px] mx-auto text-white font-poppins text-[15px] italic text-center mt-4"
+              className="w-full max-w-[400px] mx-auto text-white font-poppins text-[15px] sm:text-[9px] lg:text-[15px] italic text-center mt-6"
             >
               Each fragrance is a gateway. Together, they
-              <span className="block">form the circle.</span>
+              <span className="block sm:hidden">form the circle.</span>
             </motion.p>
             <motion.p
-              // initial={{ opacity: 0, y: 30 }}
-              // whileInView={{ opacity: 1, y: 0 }}
-              // transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
-              // viewport={{ once: true }}
-              className="font-poppins capitalize text-white text-center font-medium text-[20px] mt-7"
+              className="font-poppins text-white font-medium text-[20px] sm:text-[15px] mt-6 
+              flex items-center justify-center gap-2 text-center"
             >
               <span className="relative inline-block">
                 En
-                <span className="absolute left-0 -bottom-2 w-[24px] h-[3px] bg-white rounded-[21px]"></span>
-              </span>
-              ter the collection
+                <span className="absolute left-0 -bottom-2 w-[24px] h-[3px] bg-white rounded-[21px]" />
+              ter the collection</span>
+
+              <FaAngleRight
+                size={12}
+                className="sm:w-3.5 sm:h-3.5 md:w-4 md:h-4"
+              />
             </motion.p>
+
           </div>
         </div>
       </div>
@@ -239,7 +254,7 @@ function ProductStructure() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="text-2xl sm:text-4xl md:text-5xl lg:text-[60px] font-[600] tracking-wide font-montserrat whitespace-nowrap"
+            className="text-xl sm:text-xl md:text-4xl lg:text-[50px] font-semibold tracking-normal font-montserrat whitespace-nowrap"
           >
             THE COLLECTION AS <br className="sm:hidden" /> A WHOLE
           </motion.h1>
@@ -249,7 +264,7 @@ function ProductStructure() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             viewport={{ once: true }}
-            className="text-xs sm:text-sm md:text-base lg:text-[17px] leading-[1.6] sm:leading-[1.8] max-w-5xl mx-auto italic text-black font-medium tracking-wide capitalize text-center mt-6"
+            className="text-xs sm:text-sm md:text-base lg:text-[17px] leading-[1.6] sm:leading-[1.8] max-w-5xl mx-auto italic text-black font-medium tracking-normal capitalize text-center mt-6"
           >
             The Divine Essence Collection is the first olfactive expression of
             Maison Aditi. Inspired by the <br className="hidden md:block" />

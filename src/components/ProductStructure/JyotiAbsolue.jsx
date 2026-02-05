@@ -16,7 +16,7 @@ const JyotiAbsolue = () => {
     <div className="w-full bg-white flex flex-col items-center px-4 sm:px-6 md:px-0 mt-6 md:mt-10 lg:mt-12">
       {/* Header */}
       <div className="max-w-4xl w-full text-center pt-14 md:pt-16 lg:pt-12 pb-10 md:pb-12 lg:pb-16">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[55px] font-[600] tracking-wide font-montserrat">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[55px] font-[600] tracking-normal font-montserrat">
           JYOTI ABSOLUE
         </h1>
 

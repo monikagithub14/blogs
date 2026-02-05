@@ -421,7 +421,7 @@
 //                       size={20}
 //                       className="text-black shrink-0"
 //                     />
-//                     <span className="text-sm md:text-base font-semibold tracking-wide text-black uppercase">
+//                     <span className="text-sm md:text-base font-semibold tracking-normal text-black uppercase">
 //                       #{order._id.slice(-6)}
 //                     </span>
 //                   </div>
@@ -443,7 +443,7 @@
 //                           : "text-blue-500"
 //                       }
 //                     />
-//                     <span className="text-xs font-semibold text-gray-700 uppercase tracking-wide">
+//                     <span className="text-xs font-semibold text-gray-700 uppercase tracking-normal">
 //                       {order.Status || "Pending"}
 //                     </span>
 //                   </div>
@@ -599,7 +599,7 @@
 //             <span className="text-xl text-black font-medium block mb-1 font-Montserrat">
 //               Hello,
 //             </span>
-//             <h1 className="text-3xl md:text-4xl font-serif font-medium tracking-wide text-black capitalize">
+//             <h1 className="text-3xl md:text-4xl font-serif font-medium tracking-normal text-black capitalize">
 //               {user.name}
 //             </h1>
 //           </div>
@@ -690,7 +690,6 @@
 // };
 
 // export default MyAccount;
-
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
@@ -699,15 +698,7 @@ import { LiaShoppingBagSolid } from "react-icons/lia";
 import { PiCheckSquareThin, PiSquareThin } from "react-icons/pi";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { FaEdit } from "react-icons/fa";
-import {
-  MapPin,
-  User,
-  Phone,
-  Loader2,
-  PackageX,
-  Circle,
-  Plus,
-} from "lucide-react";
+import { MapPin, User, Phone, Loader2, PackageX, Circle, Plus } from "lucide-react";
 
 // API Hooks
 import { useGetmeQuery } from "../Redux/API/UsersAPI";
@@ -750,6 +741,7 @@ const MyAccount = () => {
     name: "Guest User",
     phone: "+91 0000000000",
   };
+
   const myOrdersList = ordersData?.orders || [];
   const totalOrders = myOrdersList.length;
 
@@ -772,7 +764,7 @@ const MyAccount = () => {
   };
 
   // -------------------------------------------
-  // SKELETON LOADER FOR TEXT (New Helper)
+  // SKELETON LOADER FOR TEXT
   // -------------------------------------------
   const TextSkeleton = ({ width = "w-32", height = "h-6" }) => (
     <div className={`${width} ${height} bg-gray-200 rounded animate-pulse`} />
@@ -823,11 +815,8 @@ const MyAccount = () => {
                       Order ID
                     </span>
                     <div className="flex items-center gap-2">
-                      <LiaShoppingBagSolid
-                        size={20}
-                        className="text-black shrink-0"
-                      />
-                      <span className="text-sm md:text-base font-semibold tracking-wide text-black uppercase">
+                      <LiaShoppingBagSolid size={20} className="text-black shrink-0" />
+                      <span className="text-sm md:text-base font-semibold tracking-normal text-black uppercase">
                         #{order._id.slice(-6)}
                       </span>
                     </div>
@@ -843,22 +832,20 @@ const MyAccount = () => {
 
                 <div className="flex flex-wrap items-center gap-3 md:gap-6 self-start md:self-center">
                   <span className="text-xs md:text-sm text-gray-600 font-medium">
-                    Date:{" "}
-                    {new Date(order.createdAt).toLocaleDateString("en-GB")}
+                    Date: {new Date(order.createdAt).toLocaleDateString("en-GB")}
                   </span>
+
                   <div className="flex items-center gap-2 border border-blue-200 bg-white px-3 py-1 rounded-full shadow-sm">
                     <Circle
                       size={8}
-                      fill={
-                        order.Status === "Completed" ? "#10B981" : "#3B82F6"
-                      }
+                      fill={order.Status === "Completed" ? "#10B981" : "#3B82F6"}
                       className={
                         order.Status === "Completed"
                           ? "text-emerald-500"
                           : "text-blue-500"
                       }
                     />
-                    <span className="text-xs font-semibold text-gray-700 uppercase tracking-wide">
+                    <span className="text-xs font-semibold text-gray-700 uppercase tracking-normal">
                       {order.Status || "Pending"}
                     </span>
                   </div>
@@ -868,8 +855,7 @@ const MyAccount = () => {
               <div className="flex flex-col gap-3">
                 {products.map((item, index) => {
                   const productDetails = item.productId || {};
-                  const productName =
-                    productDetails.name || "Product Unavailable";
+                  const productName = productDetails.name || "Product Unavailable";
                   const productPrice = productDetails.price || 0;
                   const productImg = productDetails.bottleImg || "";
 
@@ -891,11 +877,13 @@ const MyAccount = () => {
                               }}
                             />
                           ) : null}
+
                           <LiaShoppingBagSolid
                             size={24}
                             className={`text-gray-300 ${productImg ? "hidden" : "block"}`}
                           />
                         </div>
+
                         <div className="flex flex-col gap-1">
                           <h3 className="text-xs md:text-sm font-semibold text-gray-900 line-clamp-2 max-w-[150px] md:max-w-xs">
                             {productName}
@@ -905,6 +893,7 @@ const MyAccount = () => {
                           </span>
                         </div>
                       </div>
+
                       <div className="bg-[#0B0F19] text-white text-[10px] md:text-xs font-medium px-4 py-1.5 rounded-full whitespace-nowrap">
                         Qt - {item.quantity}
                       </div>
@@ -933,20 +922,16 @@ const MyAccount = () => {
   // -------------------------------------------
   const renderAddress = () => (
     <div className="w-full flex flex-col gap-6">
-      <div className="bg-[#F8F9FA] rounded-[20px] p-6 md:p-8 flex flex-col gap-8">
+      <div className="bg-[#F8F9FA] rounded-[20px] p-4 sm:p-6 md:p-8 flex flex-col gap-8">
         {addresses.map((addr, index) => (
           <div key={addr.id} className="flex flex-col">
-            <div className="flex items-center justify-between w-full pb-4">
-              <div
+            <div className="flex items-center justify-end w-full pb-4">
+              {/* <div
                 className="flex items-center gap-3 cursor-pointer select-none group"
                 onClick={() => handleSetDefault(addr.id)}
               >
                 {addr.isDefault ? (
-                  <PiCheckSquareThin
-                    size={26}
-                    color="#25D366"
-                    className="shrink-0"
-                  />
+                  <PiCheckSquareThin size={26} color="#25D366" className="shrink-0" />
                 ) : (
                   <PiSquareThin
                     size={26}
@@ -955,11 +940,12 @@ const MyAccount = () => {
                 )}
 
                 <span
-                  className={`font-semibold text-sm md:text-base ${addr.isDefault ? "text-black" : "text-gray-500"}`}
+                  className={`font-semibold text-sm md:text-base ${addr.isDefault ? "text-black" : "text-gray-500"
+                    }`}
                 >
                   Mark As Default Address
                 </span>
-              </div>
+              </div> */}
 
               {index === 0 && (
                 <button
@@ -993,104 +979,111 @@ const MyAccount = () => {
     </div>
   );
 
-  // ❌ REMOVED BLOCKING LOADER
-  // Humne wo "if (userLoading) return..." hata diya hai.
-  // Ab UI turant load hoga.
-
   return (
-    <div className="bg-white text-black h-screen flex flex-col font-sans">
+    <div className="bg-white text-black min-h-screen flex flex-col font-sans">
       {/* 1. TOP HEADER SECTION */}
       <div className="w-full shrink-0 bg-white z-20 pb-6">
-        <div className="w-full max-w-[1600px] mx-auto flex flex-col lg:flex-row items-end">
-          <div className="w-full lg:w-[320px] px-6 lg:pl-24 shrink-0 mb-4 lg:mb-0">
-            <p className="text-xs text-gray-400 mt-2 mb-6">
+        <div className="w-full max-w-[1600px] mx-auto flex flex-col lg:flex-row items-start lg:items-end gap-4">
+          <div className="w-full lg:w-[320px] px-4 sm:px-6 lg:pl-24 shrink-0">
+            <p className="text-xs text-gray-400 mt-2 mb-4">
               Home / My Account →
             </p>
             <span className="text-xl text-black font-medium block mb-1 font-Poppins">
               Hello,
             </span>
-            <h1 className="text-3xl md:text-4xl font-Montserrat font-medium tracking-wide text-black capitalize">
-              {/* ✅ Skeleton Loader for Name */}
+            <h1 className="text-3xl md:text-4xl font-Montserrat font-medium tracking-normal text-black capitalize">
               {userLoading ? <TextSkeleton width="w-48" /> : user.name}
             </h1>
           </div>
 
-          <div className="flex-1 w-full px-6 lg:px-0 pr-4 md:pr-8 lg:pr-24">
-            <div className="bg-[#F8F9FA] rounded-[20px] py-4 px-6 flex flex-wrap md:flex-nowrap items-center justify-between w-full h-full">
-              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8 w-full md:w-auto">
-                <div className="flex items-center gap-3">
-                  <div className="p-2.5 font-Poppins rounded-full bg-black text-white shrink-0">
-                    <User size={18} />
-                  </div>
-                  <span className="font-medium text-base md:text-lg truncate text-slate-900 capitalize">
-                    {/* ✅ Skeleton Loader for Name in Card */}
-                    {userLoading ? <TextSkeleton width="w-32" /> : user.name}
-                  </span>
-                </div>
+          <div className="flex-1 w-full px-4 sm:px-6 lg:px-0 pr-4 md:pr-8 lg:pr-24">
+  <div className="relative bg-[#F8F9FA] rounded-[20px] py-4 px-4 sm:px-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 w-full">
 
-                <div className="flex items-center gap-3">
-                  <div className="p-2.5 rounded-full bg-black text-white shrink-0">
-                    <Phone size={18} />
-                  </div>
-                  <span className="font-Poppins text-base md:text-lg whitespace-nowrap text-slate-900">
-                    {/* ✅ Skeleton Loader for Phone */}
-                    {userLoading ? <TextSkeleton width="w-32" /> : user.phone}
-                  </span>
-                </div>
-              </div>
-              <button className="text-black transition-colors shrink-0 ml-auto p-2 hover:bg-gray-200 rounded-full">
-                <FaEdit size={20} />
-              </button>
-            </div>
-          </div>
+    <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8 w-full md:w-auto">
+      
+      <div className="flex items-center gap-3">
+        <div className="p-2.5 font-Poppins rounded-full bg-black text-white shrink-0">
+          <User size={18} />
+        </div>
+        <span className="font-medium text-base md:text-lg truncate text-slate-900 capitalize">
+          {userLoading ? <TextSkeleton width="w-32" /> : user.name}
+        </span>
+      </div>
+
+      <div className="flex items-center gap-3">
+        <div className="p-2.5 rounded-full bg-black text-white shrink-0">
+          <Phone size={18} />
+        </div>
+        <span className="font-Poppins text-base md:text-lg whitespace-nowrap text-slate-900">
+          {userLoading ? <TextSkeleton width="w-32" /> : user.phone}
+        </span>
+      </div>
+
+    </div>
+
+    {/* Edit Button */}
+    <button className="absolute top-4 right-4 sm:static sm:ml-auto text-black transition-colors shrink-0 p-2 hover:bg-gray-200 rounded-full">
+      <FaEdit size={20} />
+    </button>
+
+  </div>
+</div>
+
         </div>
       </div>
 
       {/* 2. HORIZONTAL LINE */}
-      <div className="w-full px-6 lg:px-24 shrink-0">
+      <div className="w-full px-4 sm:px-6 lg:px-24 shrink-0">
         <div className="w-full h-px bg-gray-200" />
       </div>
 
       {/* 3. BOTTOM SECTION */}
-      <div className="flex-1 flex flex-col lg:flex-row overflow-hidden w-full max-w-[1600px] mx-auto">
-        <aside className="w-full lg:w-[320px] shrink-0 flex flex-col gap-6 px-6 py-6 lg:pl-24 bg-white z-10 border-b lg:border-b-0">
-          <nav className="flex flex-row lg:flex-col gap-4 overflow-x-auto lg:overflow-visible no-scrollbar py-2">
+      <div className="flex-1 flex flex-col lg:flex-row w-full max-w-[1600px] mx-auto">
+        {/* SIDEBAR */}
+        <aside className="w-full lg:w-[320px] shrink-0 flex flex-col gap-4 px-4 sm:px-6 py-4 lg:pl-24 bg-white z-10 border-b lg:border-b-0">
+          <nav className="flex flex-col gap-4 py-2">
             <button
               onClick={() => setActiveTab("orders")}
-              className={`flex-1 lg:flex-none flex items-center justify-between px-6 py-4 rounded-full transition-all whitespace-nowrap shadow-sm border border-transparent ${activeTab === "orders" ? "bg-black text-white" : "bg-[#F3F3F3] text-black hover:bg-gray-200"}`}
+              className={`w-full flex items-center justify-between px-6 py-4 rounded-full transition-all whitespace-nowrap shadow-sm border border-transparent ${activeTab === "orders"
+                  ? "bg-black text-white"
+                  : "bg-[#F3F3F3] text-black hover:bg-gray-200"
+                }`}
             >
               <div className="flex items-center gap-3">
                 <LiaShoppingBagSolid
                   size={22}
-                  className={
-                    activeTab === "orders" ? "text-white" : "text-black"
-                  }
+                  className={activeTab === "orders" ? "text-white" : "text-black"}
                 />
                 <span className="font-medium font-dm text-sm md:text-base">
                   Your Orders
                 </span>
               </div>
+
               <span className="h-6 w-6 flex items-center justify-center text-xs font-bold rounded-full bg-white text-black">
                 {totalOrders}
               </span>
             </button>
+
             <button
               onClick={() => setActiveTab("address")}
-              className={`flex-1 lg:flex-none flex items-center gap-3 px-6 py-4 rounded-full transition-all whitespace-nowrap shadow-sm border border-transparent ${activeTab === "address" ? "bg-black text-white" : "bg-[#F3F3F3] text-black hover:bg-gray-200"}`}
+              className={`w-full flex items-center gap-3 px-6 py-4 rounded-full transition-all whitespace-nowrap shadow-sm border border-transparent ${activeTab === "address"
+                  ? "bg-black text-white"
+                  : "bg-[#F3F3F3] text-black hover:bg-gray-200"
+                }`}
             >
               <MapPin
                 size={20}
-                className={
-                  activeTab === "address" ? "text-white" : "text-black"
-                }
+                className={activeTab === "address" ? "text-white" : "text-black"}
               />
               <span className="font-medium text-sm md:text-base">Address</span>
             </button>
           </nav>
         </aside>
 
-        <div className="flex-1 flex flex-col h-full overflow-hidden pr-4 md:pr-8 lg:pr-24 py-6">
-          <main className="flex-1 overflow-y-auto overflow-x-hidden rounded-2xl custom-scrollbar">
+
+        {/* MAIN CONTENT */}
+        <div className="flex-1 flex flex-col w-full pr-4 sm:pr-6 md:pr-8 lg:pr-24 px-4 sm:px-6 lg:px-0 py-4 sm:py-6">
+          <main className="flex-1 overflow-y-auto overflow-x-hidden lg:rounded-2xl custom-scrollbar">
             <div className="pb-24">
               {activeTab === "orders" ? renderOrders() : renderAddress()}
             </div>

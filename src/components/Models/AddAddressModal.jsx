@@ -46,7 +46,7 @@ export default function AddAddressModal({ onClose, onAddAddress }) {
       <div className="absolute inset-0" onClick={onClose}></div>
 
       {/* ✅ FORM CONTAINER (Exact Styling: 464px x 581px, Radius 20px) */}
-      <div className="relative bg-white w-[464px] h-[581px] rounded-[20px] p-8 shadow-xl z-10 flex flex-col items-center">
+      <div className="relative bg-white w-[380px] min-h-[480px] rounded-[20px] p-6 shadow-xl z-10 flex flex-col items-center">
         {/* ✅ CLOSE BUTTON (X) */}
         <button
           onClick={onClose}
@@ -61,14 +61,17 @@ export default function AddAddressModal({ onClose, onAddAddress }) {
         </h2>
 
         {/* INPUTS CONTAINER */}
-        <div className="w-full flex flex-col  gap-4">
+        <div className="w-full flex flex-col  gap-3">
           <input
             type="text"
             name="name"
             placeholder="Name"
             value={formData.name}
             onChange={handleChange}
-            className="w-full bg-gray-100 border-none rounded-full px-5 py-3 outline-none focus:ring-1 focus:ring-black"
+            className="w-full bg-gray-100
+            text-sm
+             placeholder:text-gray-400 placeholder:text-sm
+              border-none rounded-full px-4 py-2.5 outline-none focus:ring-1 focus:ring-black"
           />
 
           <input
@@ -77,7 +80,10 @@ export default function AddAddressModal({ onClose, onAddAddress }) {
             placeholder="Contact No"
             value={formData.contactNo}
             onChange={handleChange}
-            className="w-full bg-gray-100 border-none rounded-full px-5 py-3 outline-none focus:ring-1 focus:ring-black"
+            className="w-full bg-gray-100 
+            text-sm
+             placeholder:text-gray-400 placeholder:text-sm
+             border-none rounded-full px-4 py-2.5 outline-none focus:ring-1 focus:ring-black"
           />
 
           <input
@@ -86,7 +92,10 @@ export default function AddAddressModal({ onClose, onAddAddress }) {
             placeholder="Home No / Street"
             value={formData.houseNo}
             onChange={handleChange}
-            className="w-full bg-gray-100 border-none rounded-full px-5 py-3 outline-none focus:ring-1 focus:ring-black"
+            className="w-full bg-gray-100
+            text-sm
+             placeholder:text-gray-400 placeholder:text-sm
+              border-none rounded-full px-4 py-2.5 outline-none focus:ring-1 focus:ring-black"
           />
 
           <input
@@ -95,7 +104,10 @@ export default function AddAddressModal({ onClose, onAddAddress }) {
             placeholder="Near Area"
             value={formData.area}
             onChange={handleChange}
-            className="w-full bg-gray-100 border-none rounded-full px-5 py-3 outline-none focus:ring-1 focus:ring-black"
+            className="w-full bg-gray-100
+            text-sm
+             placeholder:text-gray-400 placeholder:text-sm
+               border-none rounded-full px-4 py-2.5 outline-none focus:ring-1 focus:ring-black"
           />
 
           <input
@@ -104,7 +116,10 @@ export default function AddAddressModal({ onClose, onAddAddress }) {
             placeholder="City"
             value={formData.city}
             onChange={handleChange}
-            className="w-full bg-gray-100 border-none rounded-full px-5 py-3 outline-none focus:ring-1 focus:ring-black"
+            className="w-full bg-gray-100
+            text-sm
+             placeholder:text-gray-400 placeholder:text-sm *
+              border-none rounded-full px-4 py-2.5 outline-none focus:ring-1 focus:ring-black"
           />
 
           <input
@@ -113,12 +128,15 @@ export default function AddAddressModal({ onClose, onAddAddress }) {
             placeholder="Country"
             value={formData.country}
             onChange={handleChange}
-            className="w-full bg-gray-100 border-none rounded-full px-5 py-3 outline-none focus:ring-1 focus:ring-black"
+            className="w-full bg-gray-100
+            text-sm
+             placeholder:text-gray-500 placeholder:text-sm
+              border-none rounded-full px-4 py-2.5 outline-none focus:ring-1 focus:ring-black"
           />
         </div>
 
         {/* ✅ BUTTON (Exact Styling: 168px x 41px, Radius 101px) */}
-        <div className="mt-auto mb-2">
+        <div className=" mb-2 mt-6">
           <button
             onClick={handleSubmit}
             disabled={isLoading}
